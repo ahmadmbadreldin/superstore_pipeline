@@ -1,0 +1,2192 @@
+==================== 2026-10-02T11:54:18.354060Z | 01a0fc77-176f-7591-9506-db12ea2b98f6 ====================
+11:54:18.649030 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [294ms]
+[0m15:05:03.605913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000145ACA12A80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000145ACA12AB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000145ACA12A20>]}
+
+
+============================== 15:05:03.608860 | 1dd4b275-89be-4e31-a32c-cb253464df3f ==============================
+[0m15:05:03.608860 [info ] [MainThread]: Running with dbt=1.12.5
+[0m15:05:03.638656 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt debug --profiles-dir .', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'D:\\NTI - 2026\\projects\\HW_dbtWithDuck\\superstore_airflow_dbt_duckdb\\superstore_pipeline\\dbt_superstore\\logs'}
+[0m15:05:03.652893 [info ] [MainThread]: dbt version: 1.12.5
+[0m15:05:03.653902 [info ] [MainThread]: python version: 3.12.10
+[0m15:05:03.653902 [info ] [MainThread]: python path: D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\.venv\Scripts\python.exe
+[0m15:05:03.654899 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m15:05:03.752843 [info ] [MainThread]: Using profiles dir at .
+[0m15:05:03.753846 [info ] [MainThread]: Using profiles.yml file at .\profiles.yml
+[0m15:05:03.754845 [info ] [MainThread]: Using dbt_project.yml file at D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\dbt_project.yml
+[0m15:05:03.757066 [info ] [MainThread]: adapter type: duckdb
+[0m15:05:03.758075 [info ] [MainThread]: adapter version: 1.11.0
+[0m15:05:03.856150 [info ] [MainThread]: Configuration:
+[0m15:05:03.856150 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:05:03.857151 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:05:03.857151 [info ] [MainThread]: Required dependencies:
+[0m15:05:03.857151 [debug] [MainThread]: Executing "git --help"
+[0m15:05:03.904413 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:05:03.904413 [debug] [MainThread]: STDERR: "b''"
+[0m15:05:03.905412 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:05:03.905412 [info ] [MainThread]: Connection:
+[0m15:05:03.905412 [info ] [MainThread]:   database: dev
+[0m15:05:03.906690 [info ] [MainThread]:   schema: main
+[0m15:05:03.906690 [info ] [MainThread]:   path: ../dev.duckdb
+[0m15:05:03.907687 [info ] [MainThread]:   config_options: None
+[0m15:05:03.907687 [info ] [MainThread]:   extensions: None
+[0m15:05:03.907687 [info ] [MainThread]:   settings: {}
+[0m15:05:03.907687 [info ] [MainThread]:   external_root: .
+[0m15:05:03.908688 [info ] [MainThread]:   use_credential_provider: None
+[0m15:05:03.908688 [info ] [MainThread]:   attach: None
+[0m15:05:03.909689 [info ] [MainThread]:   filesystems: None
+[0m15:05:03.909689 [info ] [MainThread]:   remote: None
+[0m15:05:03.909689 [info ] [MainThread]:   plugins: None
+[0m15:05:03.910686 [info ] [MainThread]:   disable_transactions: False
+[0m15:05:03.910686 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m15:05:04.142032 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m15:05:04.192479 [debug] [MainThread]: Using duckdb connection "debug"
+[0m15:05:04.192479 [debug] [MainThread]: On debug: select 1 as id
+[0m15:05:04.192479 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:05:04.208400 [debug] [MainThread]: SQL status: OK in 0.015 seconds
+[0m15:05:04.209394 [debug] [MainThread]: On debug: Close
+[0m15:05:04.209394 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:05:04.210392 [info ] [MainThread]: [32mAll checks passed![0m
+[0m15:05:04.211392 [debug] [MainThread]: Command `dbt debug` succeeded at 15:05:04.211392 after 0.84 seconds
+[0m15:05:04.211392 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:05:04.211392 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000145AA0ADA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000145AB18F3B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000145ACA8FA10>]}
+[0m15:05:04.212391 [debug] [MainThread]: Flushing usage events
+[0m15:05:05.151870 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:05:21.164815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FB9894C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FB8B2060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FB184CB0>]}
+
+
+============================== 15:05:21.168345 | e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb ==============================
+[0m15:05:21.168345 [info ] [MainThread]: Running with dbt=1.12.5
+[0m15:05:21.169367 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt build --profiles-dir .', 'log_path': 'D:\\NTI - 2026\\projects\\HW_dbtWithDuck\\superstore_airflow_dbt_duckdb\\superstore_pipeline\\dbt_superstore\\logs'}
+[0m15:05:21.410970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FD4AB620>]}
+[0m15:05:21.470276 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FBA52F60>]}
+[0m15:05:21.472279 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m15:05:21.686226 [debug] [MainThread]: checksum: 901c0af6b1813cd6c43cdfbcc6e9fc9140d41b0d499af91a71613f5fd321d71d, vars: {}, profile: superstore, target: dev, version: 1.12.5
+[0m15:05:21.687232 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m15:05:21.687743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FD7A3950>]}
+[0m15:05:23.363868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FDFCC6B0>]}
+[0m15:05:23.469784 [debug] [MainThread]: Wrote artifact WritableManifest to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\manifest.json
+[0m15:05:23.473792 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\semantic_manifest.json
+[0m15:05:23.492886 [debug] [MainThread]: Wrote artifact OsiDocument to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\osi_document.json
+[0m15:05:23.528873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FDF8A9F0>]}
+[0m15:05:23.529888 [info ] [MainThread]: Found 7 models, 23 data tests, 1 source, 500 macros
+[0m15:05:23.533399 [info ] [MainThread]: 
+[0m15:05:23.533399 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:05:23.534419 [info ] [MainThread]: 
+[0m15:05:23.535409 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:05:23.540423 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m15:05:23.551943 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m15:05:23.600491 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m15:05:23.600491 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m15:05:23.601492 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m15:05:23.601492 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m15:05:23.602497 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:05:23.602497 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:05:23.619462 [debug] [ThreadPool]: SQL status: OK in 0.017 seconds
+[0m15:05:23.619462 [debug] [ThreadPool]: SQL status: OK in 0.017 seconds
+[0m15:05:23.621475 [debug] [ThreadPool]: On list_dev: Close
+[0m15:05:23.622718 [debug] [ThreadPool]: On list_dev: Close
+[0m15:05:23.623718 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main_dwh)
+[0m15:05:23.624732 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main_stg)
+[0m15:05:23.625243 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main_dwh"
+"
+[0m15:05:23.625243 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main_stg"
+"
+[0m15:05:23.632380 [debug] [ThreadPool]: Using duckdb connection "create_dev_main_dwh"
+[0m15:05:23.633391 [debug] [ThreadPool]: Using duckdb connection "create_dev_main_stg"
+[0m15:05:23.634391 [debug] [ThreadPool]: On create_dev_main_dwh: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "connection_name": "create_dev_main_dwh"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type != 'duckdb'
+    
+  
+[0m15:05:23.634391 [debug] [ThreadPool]: On create_dev_main_stg: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "connection_name": "create_dev_main_stg"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type != 'duckdb'
+    
+  
+[0m15:05:23.635391 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:05:23.635391 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:05:23.636391 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:05:23.637928 [debug] [ThreadPool]: Using duckdb connection "create_dev_main_dwh"
+[0m15:05:23.637928 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m15:05:23.637928 [debug] [ThreadPool]: On create_dev_main_dwh: BEGIN
+[0m15:05:23.639477 [debug] [ThreadPool]: Using duckdb connection "create_dev_main_stg"
+[0m15:05:23.639477 [debug] [ThreadPool]: On create_dev_main_stg: BEGIN
+[0m15:05:23.640503 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m15:05:23.640503 [debug] [ThreadPool]: Using duckdb connection "create_dev_main_dwh"
+[0m15:05:23.640503 [debug] [ThreadPool]: On create_dev_main_dwh: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "connection_name": "create_dev_main_dwh"} */
+
+    
+    
+        create schema if not exists "dev"."main_dwh"
+    
+[0m15:05:23.641492 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:05:23.641492 [debug] [ThreadPool]: Using duckdb connection "create_dev_main_stg"
+[0m15:05:23.641492 [debug] [ThreadPool]: On create_dev_main_stg: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "connection_name": "create_dev_main_stg"} */
+
+    
+    
+        create schema if not exists "dev"."main_stg"
+    
+[0m15:05:23.642503 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:05:23.643514 [debug] [ThreadPool]: On create_dev_main_dwh: COMMIT
+[0m15:05:23.643514 [debug] [ThreadPool]: Using duckdb connection "create_dev_main_dwh"
+[0m15:05:23.643514 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:05:23.643514 [debug] [ThreadPool]: On create_dev_main_dwh: COMMIT
+[0m15:05:23.644514 [debug] [ThreadPool]: On create_dev_main_stg: COMMIT
+[0m15:05:23.645514 [debug] [ThreadPool]: Using duckdb connection "create_dev_main_stg"
+[0m15:05:23.645514 [debug] [ThreadPool]: On create_dev_main_stg: COMMIT
+[0m15:05:23.688795 [debug] [ThreadPool]: SQL status: OK in 0.044 seconds
+[0m15:05:23.690107 [debug] [ThreadPool]: On create_dev_main_dwh: Close
+[0m15:05:23.711036 [debug] [ThreadPool]: SQL status: OK in 0.065 seconds
+[0m15:05:23.711036 [debug] [ThreadPool]: On create_dev_main_stg: Close
+[0m15:05:23.713033 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main_dwh'
+[0m15:05:23.718100 [debug] [ThreadPool]: Using duckdb connection "list_dev_main_dwh"
+[0m15:05:23.719089 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main_stg'
+[0m15:05:23.719089 [debug] [ThreadPool]: On list_dev_main_dwh: BEGIN
+[0m15:05:23.720101 [debug] [ThreadPool]: Using duckdb connection "list_dev_main_stg"
+[0m15:05:23.720101 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:05:23.720101 [debug] [ThreadPool]: On list_dev_main_stg: BEGIN
+[0m15:05:23.721607 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:05:23.722626 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:05:23.722626 [debug] [ThreadPool]: Using duckdb connection "list_dev_main_dwh"
+[0m15:05:23.723614 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m15:05:23.723614 [debug] [ThreadPool]: On list_dev_main_dwh: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "connection_name": "list_dev_main_dwh"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_dwh'
+    and lower(table_catalog) = 'dev'
+  
+[0m15:05:23.724613 [debug] [ThreadPool]: Using duckdb connection "list_dev_main_stg"
+[0m15:05:23.724613 [debug] [ThreadPool]: On list_dev_main_stg: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "connection_name": "list_dev_main_stg"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_stg'
+    and lower(table_catalog) = 'dev'
+  
+[0m15:05:23.727641 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m15:05:23.728642 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m15:05:23.730149 [debug] [ThreadPool]: On list_dev_main_stg: ROLLBACK
+[0m15:05:23.731167 [debug] [ThreadPool]: On list_dev_main_dwh: ROLLBACK
+[0m15:05:23.731167 [debug] [ThreadPool]: On list_dev_main_stg: Close
+[0m15:05:23.732160 [debug] [ThreadPool]: On list_dev_main_dwh: Close
+[0m15:05:23.733156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FF071C70>]}
+[0m15:05:23.733156 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:05:23.734165 [debug] [MainThread]: On master: BEGIN
+[0m15:05:23.734165 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:05:23.735165 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:05:23.736208 [debug] [MainThread]: On master: COMMIT
+[0m15:05:23.737222 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:05:23.737222 [debug] [MainThread]: On master: COMMIT
+[0m15:05:23.737222 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:05:23.738202 [debug] [MainThread]: On master: Close
+[0m15:05:23.749835 [debug] [Thread-1 (]: Began running node model.superstore.stg_superstore
+[0m15:05:23.749835 [info ] [Thread-1 (]: 1 of 30 START sql view model main_stg.stg_superstore ........................... [RUN]
+[0m15:05:23.750838 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.superstore.stg_superstore'
+[0m15:05:23.750838 [debug] [Thread-1 (]: Began compiling node model.superstore.stg_superstore
+[0m15:05:23.757861 [debug] [Thread-1 (]: Writing injected SQL for node "model.superstore.stg_superstore"
+[0m15:05:23.758873 [debug] [Thread-1 (]: Began executing node model.superstore.stg_superstore
+[0m15:05:23.786885 [debug] [Thread-1 (]: Writing runtime sql for node "model.superstore.stg_superstore"
+[0m15:05:23.789972 [debug] [Thread-1 (]: Using duckdb connection "model.superstore.stg_superstore"
+[0m15:05:23.790963 [debug] [Thread-1 (]: On model.superstore.stg_superstore: BEGIN
+[0m15:05:23.790963 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:05:23.791960 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m15:05:23.791960 [debug] [Thread-1 (]: Using duckdb connection "model.superstore.stg_superstore"
+[0m15:05:23.792962 [debug] [Thread-1 (]: On model.superstore.stg_superstore: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.stg_superstore"} */
+
+  
+  create view "dev"."main_stg"."stg_superstore__dbt_tmp" as (
+    
+
+with source as (
+    select * from "dev"."ods"."raw_superstore"
+),
+
+renamed as (
+    select
+        cast("Row ID" as integer) as row_id,
+        trim(cast("Order ID" as varchar)) as order_id,
+        cast("Order Date" as date) as order_date,
+        cast("Ship Date" as date) as ship_date,
+        trim(cast("Ship Mode" as varchar)) as ship_mode,
+        trim(cast("Customer ID" as varchar)) as customer_id,
+        trim(cast("Customer Name" as varchar)) as customer_name,
+        trim(cast("Segment" as varchar)) as segment,
+        trim(cast("Country" as varchar)) as country,
+        trim(cast("City" as varchar)) as city,
+        trim(cast("State" as varchar)) as state,
+        lpad(cast(cast("Postal Code" as bigint) as varchar), 5, '0') as postal_code,
+        trim(cast("Region" as varchar)) as region,
+        trim(cast("Product ID" as varchar)) as product_id,
+        trim(cast("Category" as varchar)) as category,
+        trim(cast("Sub-Category" as varchar)) as sub_category,
+        trim(cast("Product Name" as varchar)) as product_name,
+        cast("Sales" as decimal(18, 4)) as sales,
+        cast("Quantity" as integer) as quantity,
+        cast("Discount" as decimal(10, 4)) as discount,
+        cast("Profit" as decimal(18, 4)) as profit
+    from source
+)
+
+select
+    *,
+    date_diff('day', order_date, ship_date) as shipping_days,
+    case when profit > 0 then true else false end as is_profitable,
+    case when sales = 0 then null else round(profit / sales, 4) end as profit_margin
+from renamed
+  );
+
+[0m15:05:23.794959 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:05:23.799469 [debug] [Thread-1 (]: Using duckdb connection "model.superstore.stg_superstore"
+[0m15:05:23.799469 [debug] [Thread-1 (]: On model.superstore.stg_superstore: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.stg_superstore"} */
+alter view "dev"."main_stg"."stg_superstore__dbt_tmp" rename to "stg_superstore"
+[0m15:05:23.800485 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m15:05:23.888046 [debug] [Thread-1 (]: On model.superstore.stg_superstore: COMMIT
+[0m15:05:23.888046 [debug] [Thread-1 (]: Using duckdb connection "model.superstore.stg_superstore"
+[0m15:05:23.888046 [debug] [Thread-1 (]: On model.superstore.stg_superstore: COMMIT
+[0m15:05:23.898911 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m15:05:23.903425 [debug] [Thread-1 (]: Using duckdb connection "model.superstore.stg_superstore"
+[0m15:05:23.904427 [debug] [Thread-1 (]: On model.superstore.stg_superstore: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.stg_superstore"} */
+
+      drop view if exists "dev"."main_stg"."stg_superstore__dbt_backup" cascade
+    
+[0m15:05:23.904934 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m15:05:23.907455 [debug] [Thread-1 (]: On model.superstore.stg_superstore: Close
+[0m15:05:23.908464 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FB186CF0>]}
+[0m15:05:23.909463 [info ] [Thread-1 (]: 1 of 30 OK created sql view model main_stg.stg_superstore ...................... [[32mOK[0m in 0.16s]
+[0m15:05:23.910462 [debug] [Thread-1 (]: Finished running node model.superstore.stg_superstore
+[0m15:05:23.911462 [debug] [Thread-3 (]: Began running node test.superstore.not_null_stg_superstore_customer_id.be943af154
+[0m15:05:23.912461 [debug] [Thread-4 (]: Began running node test.superstore.not_null_stg_superstore_order_date.cfd79be3ba
+[0m15:05:23.912461 [info ] [Thread-3 (]: 2 of 30 START test not_null_stg_superstore_customer_id ......................... [RUN]
+[0m15:05:23.914459 [debug] [Thread-3 (]: Acquiring new duckdb connection 'test.superstore.not_null_stg_superstore_customer_id.be943af154'
+[0m15:05:23.914459 [debug] [Thread-3 (]: Began compiling node test.superstore.not_null_stg_superstore_customer_id.be943af154
+[0m15:05:23.914459 [debug] [Thread-2 (]: Began running node test.superstore.not_null_stg_superstore_order_id.ebbb90b34b
+[0m15:05:23.925997 [debug] [Thread-3 (]: Writing injected SQL for node "test.superstore.not_null_stg_superstore_customer_id.be943af154"
+[0m15:05:23.925997 [debug] [Thread-1 (]: Began running node test.superstore.not_null_stg_superstore_product_id.cd1f4bba11
+[0m15:05:23.913463 [info ] [Thread-4 (]: 3 of 30 START test not_null_stg_superstore_order_date .......................... [RUN]
+[0m15:05:23.927507 [info ] [Thread-2 (]: 4 of 30 START test not_null_stg_superstore_order_id ............................ [RUN]
+[0m15:05:23.928520 [info ] [Thread-1 (]: 5 of 30 START test not_null_stg_superstore_product_id .......................... [RUN]
+[0m15:05:23.929517 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.superstore.not_null_stg_superstore_order_date.cfd79be3ba'
+[0m15:05:23.930519 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.superstore.not_null_stg_superstore_order_id.ebbb90b34b'
+[0m15:05:23.930519 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.superstore.stg_superstore, now test.superstore.not_null_stg_superstore_product_id.cd1f4bba11)
+[0m15:05:23.931521 [debug] [Thread-4 (]: Began compiling node test.superstore.not_null_stg_superstore_order_date.cfd79be3ba
+[0m15:05:23.931521 [debug] [Thread-2 (]: Began compiling node test.superstore.not_null_stg_superstore_order_id.ebbb90b34b
+[0m15:05:23.932564 [debug] [Thread-3 (]: Began executing node test.superstore.not_null_stg_superstore_customer_id.be943af154
+[0m15:05:23.932564 [debug] [Thread-1 (]: Began compiling node test.superstore.not_null_stg_superstore_product_id.cd1f4bba11
+[0m15:05:23.939080 [debug] [Thread-4 (]: Writing injected SQL for node "test.superstore.not_null_stg_superstore_order_date.cfd79be3ba"
+[0m15:05:23.945076 [debug] [Thread-2 (]: Writing injected SQL for node "test.superstore.not_null_stg_superstore_order_id.ebbb90b34b"
+[0m15:05:23.963835 [debug] [Thread-3 (]: Writing runtime sql for node "test.superstore.not_null_stg_superstore_customer_id.be943af154"
+[0m15:05:23.968842 [debug] [Thread-1 (]: Writing injected SQL for node "test.superstore.not_null_stg_superstore_product_id.cd1f4bba11"
+[0m15:05:23.971426 [debug] [Thread-4 (]: Began executing node test.superstore.not_null_stg_superstore_order_date.cfd79be3ba
+[0m15:05:23.973986 [debug] [Thread-4 (]: Writing runtime sql for node "test.superstore.not_null_stg_superstore_order_date.cfd79be3ba"
+[0m15:05:23.974982 [debug] [Thread-2 (]: Began executing node test.superstore.not_null_stg_superstore_order_id.ebbb90b34b
+[0m15:05:23.976981 [debug] [Thread-2 (]: Writing runtime sql for node "test.superstore.not_null_stg_superstore_order_id.ebbb90b34b"
+[0m15:05:23.976981 [debug] [Thread-1 (]: Began executing node test.superstore.not_null_stg_superstore_product_id.cd1f4bba11
+[0m15:05:23.977974 [debug] [Thread-3 (]: Using duckdb connection "test.superstore.not_null_stg_superstore_customer_id.be943af154"
+[0m15:05:23.978976 [debug] [Thread-1 (]: Writing runtime sql for node "test.superstore.not_null_stg_superstore_product_id.cd1f4bba11"
+[0m15:05:23.979975 [debug] [Thread-4 (]: Using duckdb connection "test.superstore.not_null_stg_superstore_order_date.cfd79be3ba"
+[0m15:05:23.980975 [debug] [Thread-3 (]: On test.superstore.not_null_stg_superstore_customer_id.be943af154: BEGIN
+[0m15:05:23.981481 [debug] [Thread-4 (]: On test.superstore.not_null_stg_superstore_order_date.cfd79be3ba: BEGIN
+[0m15:05:23.981987 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:05:23.981987 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:05:23.982996 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.not_null_stg_superstore_order_id.ebbb90b34b"
+[0m15:05:23.982996 [debug] [Thread-1 (]: Using duckdb connection "test.superstore.not_null_stg_superstore_product_id.cd1f4bba11"
+[0m15:05:23.984018 [debug] [Thread-2 (]: On test.superstore.not_null_stg_superstore_order_id.ebbb90b34b: BEGIN
+[0m15:05:23.984018 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m15:05:23.985004 [debug] [Thread-1 (]: On test.superstore.not_null_stg_superstore_product_id.cd1f4bba11: BEGIN
+[0m15:05:23.985004 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m15:05:23.985004 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:05:23.986014 [debug] [Thread-3 (]: Using duckdb connection "test.superstore.not_null_stg_superstore_customer_id.be943af154"
+[0m15:05:23.987003 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:05:23.987003 [debug] [Thread-4 (]: Using duckdb connection "test.superstore.not_null_stg_superstore_order_date.cfd79be3ba"
+[0m15:05:23.987003 [debug] [Thread-3 (]: On test.superstore.not_null_stg_superstore_customer_id.be943af154: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_stg_superstore_customer_id.be943af154"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from "dev"."main_stg"."stg_superstore"
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:23.988514 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m15:05:23.989534 [debug] [Thread-4 (]: On test.superstore.not_null_stg_superstore_order_date.cfd79be3ba: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_stg_superstore_order_date.cfd79be3ba"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_date
+from "dev"."main_stg"."stg_superstore"
+where order_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:23.989534 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:05:23.989534 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.not_null_stg_superstore_order_id.ebbb90b34b"
+[0m15:05:23.990534 [debug] [Thread-1 (]: Using duckdb connection "test.superstore.not_null_stg_superstore_product_id.cd1f4bba11"
+[0m15:05:23.991542 [debug] [Thread-2 (]: On test.superstore.not_null_stg_superstore_order_id.ebbb90b34b: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_stg_superstore_order_id.ebbb90b34b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from "dev"."main_stg"."stg_superstore"
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:23.992653 [debug] [Thread-1 (]: On test.superstore.not_null_stg_superstore_product_id.cd1f4bba11: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_stg_superstore_product_id.cd1f4bba11"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_id
+from "dev"."main_stg"."stg_superstore"
+where product_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:23.993647 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m15:05:23.994642 [debug] [Thread-4 (]: SQL status: OK in 0.004 seconds
+[0m15:05:23.998645 [debug] [Thread-4 (]: On test.superstore.not_null_stg_superstore_order_date.cfd79be3ba: ROLLBACK
+[0m15:05:23.998645 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m15:05:24.000640 [debug] [Thread-3 (]: On test.superstore.not_null_stg_superstore_customer_id.be943af154: ROLLBACK
+[0m15:05:24.000640 [debug] [Thread-4 (]: On test.superstore.not_null_stg_superstore_order_date.cfd79be3ba: Close
+[0m15:05:24.000640 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m15:05:24.003168 [debug] [Thread-2 (]: On test.superstore.not_null_stg_superstore_order_id.ebbb90b34b: ROLLBACK
+[0m15:05:24.003168 [debug] [Thread-3 (]: On test.superstore.not_null_stg_superstore_customer_id.be943af154: Close
+[0m15:05:24.004674 [info ] [Thread-4 (]: 3 of 30 PASS not_null_stg_superstore_order_date ................................ [[32mPASS[0m in 0.08s]
+[0m15:05:24.006698 [debug] [Thread-1 (]: On test.superstore.not_null_stg_superstore_product_id.cd1f4bba11: ROLLBACK
+[0m15:05:24.007694 [debug] [Thread-4 (]: Finished running node test.superstore.not_null_stg_superstore_order_date.cfd79be3ba
+[0m15:05:24.008702 [debug] [Thread-2 (]: On test.superstore.not_null_stg_superstore_order_id.ebbb90b34b: Close
+[0m15:05:24.007694 [info ] [Thread-3 (]: 2 of 30 PASS not_null_stg_superstore_customer_id ............................... [[32mPASS[0m in 0.09s]
+[0m15:05:24.008702 [debug] [Thread-4 (]: Began running node test.superstore.not_null_stg_superstore_row_id.a028666c6e
+[0m15:05:24.009680 [debug] [Thread-1 (]: On test.superstore.not_null_stg_superstore_product_id.cd1f4bba11: Close
+[0m15:05:24.010680 [debug] [Thread-3 (]: Finished running node test.superstore.not_null_stg_superstore_customer_id.be943af154
+[0m15:05:24.010680 [info ] [Thread-2 (]: 4 of 30 PASS not_null_stg_superstore_order_id .................................. [[32mPASS[0m in 0.08s]
+[0m15:05:24.011682 [debug] [Thread-3 (]: Began running node test.superstore.not_null_stg_superstore_sales.86849a7f58
+[0m15:05:24.011682 [info ] [Thread-4 (]: 6 of 30 START test not_null_stg_superstore_row_id .............................. [RUN]
+[0m15:05:24.013730 [debug] [Thread-2 (]: Finished running node test.superstore.not_null_stg_superstore_order_id.ebbb90b34b
+[0m15:05:24.012683 [info ] [Thread-1 (]: 5 of 30 PASS not_null_stg_superstore_product_id ................................ [[32mPASS[0m in 0.08s]
+[0m15:05:24.014728 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_stg_superstore_order_date.cfd79be3ba, now test.superstore.not_null_stg_superstore_row_id.a028666c6e)
+[0m15:05:24.013730 [info ] [Thread-3 (]: 7 of 30 START test not_null_stg_superstore_sales ............................... [RUN]
+[0m15:05:24.015728 [debug] [Thread-2 (]: Began running node test.superstore.unique_stg_superstore_row_id.52fbdc42ed
+[0m15:05:24.015728 [debug] [Thread-1 (]: Finished running node test.superstore.not_null_stg_superstore_product_id.cd1f4bba11
+[0m15:05:24.016721 [debug] [Thread-4 (]: Began compiling node test.superstore.not_null_stg_superstore_row_id.a028666c6e
+[0m15:05:24.016721 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_stg_superstore_customer_id.be943af154, now test.superstore.not_null_stg_superstore_sales.86849a7f58)
+[0m15:05:24.017730 [info ] [Thread-2 (]: 8 of 30 START test unique_stg_superstore_row_id ................................ [RUN]
+[0m15:05:24.024951 [debug] [Thread-4 (]: Writing injected SQL for node "test.superstore.not_null_stg_superstore_row_id.a028666c6e"
+[0m15:05:24.025976 [debug] [Thread-3 (]: Began compiling node test.superstore.not_null_stg_superstore_sales.86849a7f58
+[0m15:05:24.026965 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_stg_superstore_order_id.ebbb90b34b, now test.superstore.unique_stg_superstore_row_id.52fbdc42ed)
+[0m15:05:24.033995 [debug] [Thread-3 (]: Writing injected SQL for node "test.superstore.not_null_stg_superstore_sales.86849a7f58"
+[0m15:05:24.035009 [debug] [Thread-2 (]: Began compiling node test.superstore.unique_stg_superstore_row_id.52fbdc42ed
+[0m15:05:24.043132 [debug] [Thread-2 (]: Writing injected SQL for node "test.superstore.unique_stg_superstore_row_id.52fbdc42ed"
+[0m15:05:24.043132 [debug] [Thread-3 (]: Began executing node test.superstore.not_null_stg_superstore_sales.86849a7f58
+[0m15:05:24.044646 [debug] [Thread-4 (]: Began executing node test.superstore.not_null_stg_superstore_row_id.a028666c6e
+[0m15:05:24.046655 [debug] [Thread-3 (]: Writing runtime sql for node "test.superstore.not_null_stg_superstore_sales.86849a7f58"
+[0m15:05:24.048675 [debug] [Thread-4 (]: Writing runtime sql for node "test.superstore.not_null_stg_superstore_row_id.a028666c6e"
+[0m15:05:24.049660 [debug] [Thread-2 (]: Began executing node test.superstore.unique_stg_superstore_row_id.52fbdc42ed
+[0m15:05:24.051676 [debug] [Thread-2 (]: Writing runtime sql for node "test.superstore.unique_stg_superstore_row_id.52fbdc42ed"
+[0m15:05:24.052676 [debug] [Thread-4 (]: Using duckdb connection "test.superstore.not_null_stg_superstore_row_id.a028666c6e"
+[0m15:05:24.052676 [debug] [Thread-3 (]: Using duckdb connection "test.superstore.not_null_stg_superstore_sales.86849a7f58"
+[0m15:05:24.053656 [debug] [Thread-4 (]: On test.superstore.not_null_stg_superstore_row_id.a028666c6e: BEGIN
+[0m15:05:24.053656 [debug] [Thread-3 (]: On test.superstore.not_null_stg_superstore_sales.86849a7f58: BEGIN
+[0m15:05:24.054655 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:05:24.054655 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.unique_stg_superstore_row_id.52fbdc42ed"
+[0m15:05:24.055161 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:05:24.055161 [debug] [Thread-2 (]: On test.superstore.unique_stg_superstore_row_id.52fbdc42ed: BEGIN
+[0m15:05:24.056175 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.056175 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:05:24.057179 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.057622 [debug] [Thread-4 (]: Using duckdb connection "test.superstore.not_null_stg_superstore_row_id.a028666c6e"
+[0m15:05:24.057967 [debug] [Thread-3 (]: Using duckdb connection "test.superstore.not_null_stg_superstore_sales.86849a7f58"
+[0m15:05:24.057967 [debug] [Thread-4 (]: On test.superstore.not_null_stg_superstore_row_id.a028666c6e: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_stg_superstore_row_id.a028666c6e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select row_id
+from "dev"."main_stg"."stg_superstore"
+where row_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.058996 [debug] [Thread-3 (]: On test.superstore.not_null_stg_superstore_sales.86849a7f58: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_stg_superstore_sales.86849a7f58"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sales
+from "dev"."main_stg"."stg_superstore"
+where sales is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.058996 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.059661 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.unique_stg_superstore_row_id.52fbdc42ed"
+[0m15:05:24.059661 [debug] [Thread-2 (]: On test.superstore.unique_stg_superstore_row_id.52fbdc42ed: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.unique_stg_superstore_row_id.52fbdc42ed"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    row_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main_stg"."stg_superstore"
+where row_id is not null
+group by row_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.061679 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.062678 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.064680 [debug] [Thread-4 (]: On test.superstore.not_null_stg_superstore_row_id.a028666c6e: ROLLBACK
+[0m15:05:24.067216 [debug] [Thread-3 (]: On test.superstore.not_null_stg_superstore_sales.86849a7f58: ROLLBACK
+[0m15:05:24.067216 [debug] [Thread-2 (]: SQL status: OK in 0.007 seconds
+[0m15:05:24.068227 [debug] [Thread-4 (]: On test.superstore.not_null_stg_superstore_row_id.a028666c6e: Close
+[0m15:05:24.069211 [debug] [Thread-3 (]: On test.superstore.not_null_stg_superstore_sales.86849a7f58: Close
+[0m15:05:24.070209 [debug] [Thread-2 (]: On test.superstore.unique_stg_superstore_row_id.52fbdc42ed: ROLLBACK
+[0m15:05:24.071724 [info ] [Thread-4 (]: 6 of 30 PASS not_null_stg_superstore_row_id .................................... [[32mPASS[0m in 0.06s]
+[0m15:05:24.071724 [info ] [Thread-3 (]: 7 of 30 PASS not_null_stg_superstore_sales ..................................... [[32mPASS[0m in 0.06s]
+[0m15:05:24.073740 [debug] [Thread-4 (]: Finished running node test.superstore.not_null_stg_superstore_row_id.a028666c6e
+[0m15:05:24.073740 [debug] [Thread-3 (]: Finished running node test.superstore.not_null_stg_superstore_sales.86849a7f58
+[0m15:05:24.073740 [debug] [Thread-2 (]: On test.superstore.unique_stg_superstore_row_id.52fbdc42ed: Close
+[0m15:05:24.074728 [info ] [Thread-2 (]: 8 of 30 PASS unique_stg_superstore_row_id ...................................... [[32mPASS[0m in 0.05s]
+[0m15:05:24.075739 [debug] [Thread-2 (]: Finished running node test.superstore.unique_stg_superstore_row_id.52fbdc42ed
+[0m15:05:24.076737 [debug] [Thread-1 (]: Began running node model.superstore.agg_monthly_sales
+[0m15:05:24.077917 [debug] [Thread-4 (]: Began running node model.superstore.dim_customers
+[0m15:05:24.078945 [debug] [Thread-3 (]: Began running node model.superstore.dim_dates
+[0m15:05:24.077917 [info ] [Thread-1 (]: 9 of 30 START sql table model main_dwh.agg_monthly_sales ....................... [RUN]
+[0m15:05:24.078945 [debug] [Thread-2 (]: Began running node model.superstore.dim_locations
+[0m15:05:24.079926 [info ] [Thread-4 (]: 10 of 30 START sql table model main_dwh.dim_customers .......................... [RUN]
+[0m15:05:24.081137 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_stg_superstore_product_id.cd1f4bba11, now model.superstore.agg_monthly_sales)
+[0m15:05:24.079926 [info ] [Thread-3 (]: 11 of 30 START sql table model main_dwh.dim_dates .............................. [RUN]
+[0m15:05:24.082156 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_stg_superstore_row_id.a028666c6e, now model.superstore.dim_customers)
+[0m15:05:24.082661 [debug] [Thread-1 (]: Began compiling node model.superstore.agg_monthly_sales
+[0m15:05:24.081137 [info ] [Thread-2 (]: 12 of 30 START sql table model main_dwh.dim_locations .......................... [RUN]
+[0m15:05:24.082661 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_stg_superstore_sales.86849a7f58, now model.superstore.dim_dates)
+[0m15:05:24.083669 [debug] [Thread-4 (]: Began compiling node model.superstore.dim_customers
+[0m15:05:24.085176 [debug] [Thread-1 (]: Writing injected SQL for node "model.superstore.agg_monthly_sales"
+[0m15:05:24.086185 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.superstore.unique_stg_superstore_row_id.52fbdc42ed, now model.superstore.dim_locations)
+[0m15:05:24.086185 [debug] [Thread-3 (]: Began compiling node model.superstore.dim_dates
+[0m15:05:24.089712 [debug] [Thread-4 (]: Writing injected SQL for node "model.superstore.dim_customers"
+[0m15:05:24.089712 [debug] [Thread-2 (]: Began compiling node model.superstore.dim_locations
+[0m15:05:24.092719 [debug] [Thread-3 (]: Writing injected SQL for node "model.superstore.dim_dates"
+[0m15:05:24.095707 [debug] [Thread-2 (]: Writing injected SQL for node "model.superstore.dim_locations"
+[0m15:05:24.096713 [debug] [Thread-1 (]: Began executing node model.superstore.agg_monthly_sales
+[0m15:05:24.096713 [debug] [Thread-4 (]: Began executing node model.superstore.dim_customers
+[0m15:05:24.134817 [debug] [Thread-1 (]: Writing runtime sql for node "model.superstore.agg_monthly_sales"
+[0m15:05:24.137821 [debug] [Thread-4 (]: Writing runtime sql for node "model.superstore.dim_customers"
+[0m15:05:24.138851 [debug] [Thread-3 (]: Began executing node model.superstore.dim_dates
+[0m15:05:24.139832 [debug] [Thread-2 (]: Began executing node model.superstore.dim_locations
+[0m15:05:24.142355 [debug] [Thread-3 (]: Writing runtime sql for node "model.superstore.dim_dates"
+[0m15:05:24.145363 [debug] [Thread-2 (]: Writing runtime sql for node "model.superstore.dim_locations"
+[0m15:05:24.146347 [debug] [Thread-4 (]: Using duckdb connection "model.superstore.dim_customers"
+[0m15:05:24.146347 [debug] [Thread-4 (]: On model.superstore.dim_customers: BEGIN
+[0m15:05:24.147350 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:05:24.148344 [debug] [Thread-1 (]: Using duckdb connection "model.superstore.agg_monthly_sales"
+[0m15:05:24.148344 [debug] [Thread-1 (]: On model.superstore.agg_monthly_sales: BEGIN
+[0m15:05:24.149354 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.149354 [debug] [Thread-3 (]: Using duckdb connection "model.superstore.dim_dates"
+[0m15:05:24.149354 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:05:24.150342 [debug] [Thread-4 (]: Using duckdb connection "model.superstore.dim_customers"
+[0m15:05:24.150342 [debug] [Thread-2 (]: Using duckdb connection "model.superstore.dim_locations"
+[0m15:05:24.150342 [debug] [Thread-3 (]: On model.superstore.dim_dates: BEGIN
+[0m15:05:24.151342 [debug] [Thread-4 (]: On model.superstore.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.dim_customers"} */
+
+    
+
+    create  table
+      "dev"."main_dwh"."dim_customers__dbt_tmp"
+  
+    
+    as (
+      
+
+select
+    customer_id,
+    any_value(customer_name) as customer_name,
+    any_value(segment) as segment,
+    min(order_date) as first_order_date,
+    max(order_date) as most_recent_order_date,
+    count(distinct order_id) as number_of_orders,
+    round(sum(sales), 2) as lifetime_sales,
+    round(sum(profit), 2) as lifetime_profit
+from "dev"."main_stg"."stg_superstore"
+group by customer_id
+    );
+    
+  
+[0m15:05:24.151342 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.152632 [debug] [Thread-2 (]: On model.superstore.dim_locations: BEGIN
+[0m15:05:24.152632 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:05:24.153651 [debug] [Thread-1 (]: Using duckdb connection "model.superstore.agg_monthly_sales"
+[0m15:05:24.153651 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:05:24.154641 [debug] [Thread-1 (]: On model.superstore.agg_monthly_sales: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.agg_monthly_sales"} */
+
+    
+
+    create  table
+      "dev"."main_dwh"."agg_monthly_sales__dbt_tmp"
+  
+    
+    as (
+      
+
+select
+    date_trunc('month', order_date) as month,
+    region,
+    category,
+    count(distinct order_id) as orders,
+    sum(quantity) as units_sold,
+    round(sum(sales), 2) as sales,
+    round(sum(profit), 2) as profit,
+    round(sum(profit) / nullif(sum(sales), 0), 4) as profit_margin
+from "dev"."main_stg"."stg_superstore"
+group by 1, 2, 3
+    );
+    
+  
+[0m15:05:24.155151 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.156163 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.156163 [debug] [Thread-3 (]: Using duckdb connection "model.superstore.dim_dates"
+[0m15:05:24.157163 [debug] [Thread-2 (]: Using duckdb connection "model.superstore.dim_locations"
+[0m15:05:24.157163 [debug] [Thread-3 (]: On model.superstore.dim_dates: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.dim_dates"} */
+
+    
+
+    create  table
+      "dev"."main_dwh"."dim_dates__dbt_tmp"
+  
+    
+    as (
+      
+
+with bounds as (
+    select min(order_date) as min_date, max(ship_date) as max_date
+    from "dev"."main_stg"."stg_superstore"
+),
+calendar as (
+    select cast(d as date) as date_day
+    from bounds,
+    unnest(generate_series(min_date, max_date, interval 1 day)) as t(d)
+)
+select
+    cast(strftime(date_day, '%Y%m%d') as integer) as date_key,
+    date_day,
+    year(date_day) as year,
+    quarter(date_day) as quarter,
+    month(date_day) as month,
+    monthname(date_day) as month_name,
+    day(date_day) as day_of_month,
+    dayofweek(date_day) as day_of_week,
+    weekofyear(date_day) as week_of_year
+from calendar
+    );
+    
+  
+[0m15:05:24.158164 [debug] [Thread-2 (]: On model.superstore.dim_locations: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.dim_locations"} */
+
+    
+
+    create  table
+      "dev"."main_dwh"."dim_locations__dbt_tmp"
+  
+    
+    as (
+      
+
+select distinct
+    md5(concat_ws('|', country, state, city, coalesce(postal_code, ''), region)) as location_key,
+    country,
+    state,
+    city,
+    postal_code,
+    region
+from "dev"."main_stg"."stg_superstore"
+    );
+    
+  
+[0m15:05:24.174805 [debug] [Thread-3 (]: SQL status: OK in 0.016 seconds
+[0m15:05:24.177807 [debug] [Thread-3 (]: Using duckdb connection "model.superstore.dim_dates"
+[0m15:05:24.178808 [debug] [Thread-3 (]: On model.superstore.dim_dates: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.dim_dates"} */
+alter table "dev"."main_dwh"."dim_dates__dbt_tmp" rename to "dim_dates"
+[0m15:05:24.180806 [debug] [Thread-4 (]: SQL status: OK in 0.027 seconds
+[0m15:05:24.183311 [debug] [Thread-4 (]: Using duckdb connection "model.superstore.dim_customers"
+[0m15:05:24.184318 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m15:05:24.184318 [debug] [Thread-4 (]: On model.superstore.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.dim_customers"} */
+alter table "dev"."main_dwh"."dim_customers__dbt_tmp" rename to "dim_customers"
+[0m15:05:24.190937 [debug] [Thread-3 (]: On model.superstore.dim_dates: COMMIT
+[0m15:05:24.190937 [debug] [Thread-2 (]: SQL status: OK in 0.032 seconds
+[0m15:05:24.191940 [debug] [Thread-1 (]: SQL status: OK in 0.035 seconds
+[0m15:05:24.191940 [debug] [Thread-3 (]: Using duckdb connection "model.superstore.dim_dates"
+[0m15:05:24.191940 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m15:05:24.194445 [debug] [Thread-2 (]: Using duckdb connection "model.superstore.dim_locations"
+[0m15:05:24.197453 [debug] [Thread-1 (]: Using duckdb connection "model.superstore.agg_monthly_sales"
+[0m15:05:24.197453 [debug] [Thread-3 (]: On model.superstore.dim_dates: COMMIT
+[0m15:05:24.199452 [debug] [Thread-4 (]: On model.superstore.dim_customers: COMMIT
+[0m15:05:24.200962 [debug] [Thread-2 (]: On model.superstore.dim_locations: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.dim_locations"} */
+alter table "dev"."main_dwh"."dim_locations__dbt_tmp" rename to "dim_locations"
+[0m15:05:24.201706 [debug] [Thread-1 (]: On model.superstore.agg_monthly_sales: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.agg_monthly_sales"} */
+alter table "dev"."main_dwh"."agg_monthly_sales__dbt_tmp" rename to "agg_monthly_sales"
+[0m15:05:24.202738 [debug] [Thread-4 (]: Using duckdb connection "model.superstore.dim_customers"
+[0m15:05:24.202738 [debug] [Thread-4 (]: On model.superstore.dim_customers: COMMIT
+[0m15:05:24.204256 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m15:05:24.204776 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.206794 [debug] [Thread-2 (]: On model.superstore.dim_locations: COMMIT
+[0m15:05:24.208786 [debug] [Thread-1 (]: On model.superstore.agg_monthly_sales: COMMIT
+[0m15:05:24.209844 [debug] [Thread-2 (]: Using duckdb connection "model.superstore.dim_locations"
+[0m15:05:24.210781 [debug] [Thread-1 (]: Using duckdb connection "model.superstore.agg_monthly_sales"
+[0m15:05:24.210781 [debug] [Thread-2 (]: On model.superstore.dim_locations: COMMIT
+[0m15:05:24.210781 [debug] [Thread-1 (]: On model.superstore.agg_monthly_sales: COMMIT
+[0m15:05:24.213789 [debug] [Thread-3 (]: SQL status: OK in 0.011 seconds
+[0m15:05:24.215311 [debug] [Thread-3 (]: Using duckdb connection "model.superstore.dim_dates"
+[0m15:05:24.216320 [debug] [Thread-3 (]: On model.superstore.dim_dates: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.dim_dates"} */
+
+      drop table if exists "dev"."main_dwh"."dim_dates__dbt_backup" cascade
+    
+[0m15:05:24.226961 [debug] [Thread-4 (]: SQL status: OK in 0.023 seconds
+[0m15:05:24.227961 [debug] [Thread-4 (]: Using duckdb connection "model.superstore.dim_customers"
+[0m15:05:24.228960 [debug] [Thread-4 (]: On model.superstore.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.dim_customers"} */
+
+      drop table if exists "dev"."main_dwh"."dim_customers__dbt_backup" cascade
+    
+[0m15:05:24.238529 [debug] [Thread-3 (]: SQL status: OK in 0.022 seconds
+[0m15:05:24.240529 [debug] [Thread-3 (]: On model.superstore.dim_dates: Close
+[0m15:05:24.241528 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FF04F3B0>]}
+[0m15:05:24.241528 [debug] [Thread-2 (]: SQL status: OK in 0.030 seconds
+[0m15:05:24.243529 [debug] [Thread-2 (]: Using duckdb connection "model.superstore.dim_locations"
+[0m15:05:24.242527 [info ] [Thread-3 (]: 11 of 30 OK created sql table model main_dwh.dim_dates ......................... [[32mOK[0m in 0.16s]
+[0m15:05:24.244527 [debug] [Thread-2 (]: On model.superstore.dim_locations: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.dim_locations"} */
+
+      drop table if exists "dev"."main_dwh"."dim_locations__dbt_backup" cascade
+    
+[0m15:05:24.244527 [debug] [Thread-3 (]: Finished running node model.superstore.dim_dates
+[0m15:05:24.245527 [debug] [Thread-3 (]: Began running node model.superstore.dim_products
+[0m15:05:24.245527 [info ] [Thread-3 (]: 13 of 30 START sql table model main_dwh.dim_products ........................... [RUN]
+[0m15:05:24.246528 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.superstore.dim_dates, now model.superstore.dim_products)
+[0m15:05:24.246528 [debug] [Thread-3 (]: Began compiling node model.superstore.dim_products
+[0m15:05:24.250698 [debug] [Thread-3 (]: Writing injected SQL for node "model.superstore.dim_products"
+[0m15:05:24.251203 [debug] [Thread-1 (]: SQL status: OK in 0.039 seconds
+[0m15:05:24.251203 [debug] [Thread-4 (]: SQL status: OK in 0.023 seconds
+[0m15:05:24.253208 [debug] [Thread-1 (]: Using duckdb connection "model.superstore.agg_monthly_sales"
+[0m15:05:24.253208 [debug] [Thread-2 (]: SQL status: OK in 0.009 seconds
+[0m15:05:24.254207 [debug] [Thread-3 (]: Began executing node model.superstore.dim_products
+[0m15:05:24.256212 [debug] [Thread-4 (]: On model.superstore.dim_customers: Close
+[0m15:05:24.257205 [debug] [Thread-1 (]: On model.superstore.agg_monthly_sales: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.agg_monthly_sales"} */
+
+      drop table if exists "dev"."main_dwh"."agg_monthly_sales__dbt_backup" cascade
+    
+[0m15:05:24.258218 [debug] [Thread-2 (]: On model.superstore.dim_locations: Close
+[0m15:05:24.261730 [debug] [Thread-3 (]: Writing runtime sql for node "model.superstore.dim_products"
+[0m15:05:24.262727 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FDDEBDD0>]}
+[0m15:05:24.263719 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FDDEABA0>]}
+[0m15:05:24.265719 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.265719 [info ] [Thread-4 (]: 10 of 30 OK created sql table model main_dwh.dim_customers ..................... [[32mOK[0m in 0.18s]
+[0m15:05:24.268758 [debug] [Thread-1 (]: On model.superstore.agg_monthly_sales: Close
+[0m15:05:24.269775 [debug] [Thread-4 (]: Finished running node model.superstore.dim_customers
+[0m15:05:24.269775 [debug] [Thread-3 (]: Using duckdb connection "model.superstore.dim_products"
+[0m15:05:24.267225 [info ] [Thread-2 (]: 12 of 30 OK created sql table model main_dwh.dim_locations ..................... [[32mOK[0m in 0.18s]
+[0m15:05:24.270698 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FDDE8110>]}
+[0m15:05:24.270698 [debug] [Thread-4 (]: Began running node model.superstore.fact_sales
+[0m15:05:24.271709 [debug] [Thread-3 (]: On model.superstore.dim_products: BEGIN
+[0m15:05:24.272712 [debug] [Thread-2 (]: Finished running node model.superstore.dim_locations
+[0m15:05:24.272712 [info ] [Thread-1 (]: 9 of 30 OK created sql table model main_dwh.agg_monthly_sales .................. [[32mOK[0m in 0.19s]
+[0m15:05:24.273722 [info ] [Thread-4 (]: 14 of 30 START sql table model main_dwh.fact_sales ............................. [RUN]
+[0m15:05:24.274707 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:05:24.275719 [debug] [Thread-2 (]: Began running node test.superstore.not_null_dim_dates_date_key.8dfe93e348
+[0m15:05:24.276715 [debug] [Thread-1 (]: Finished running node model.superstore.agg_monthly_sales
+[0m15:05:24.276715 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.superstore.dim_customers, now model.superstore.fact_sales)
+[0m15:05:24.277714 [debug] [Thread-1 (]: Began running node test.superstore.unique_dim_dates_date_key.61e1d0726d
+[0m15:05:24.277714 [info ] [Thread-2 (]: 15 of 30 START test not_null_dim_dates_date_key ................................ [RUN]
+[0m15:05:24.277714 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m15:05:24.279219 [debug] [Thread-4 (]: Began compiling node model.superstore.fact_sales
+[0m15:05:24.280228 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.superstore.dim_locations, now test.superstore.not_null_dim_dates_date_key.8dfe93e348)
+[0m15:05:24.279219 [info ] [Thread-1 (]: 16 of 30 START test unique_dim_dates_date_key .................................. [RUN]
+[0m15:05:24.281230 [debug] [Thread-3 (]: Using duckdb connection "model.superstore.dim_products"
+[0m15:05:24.283747 [debug] [Thread-4 (]: Writing injected SQL for node "model.superstore.fact_sales"
+[0m15:05:24.283747 [debug] [Thread-2 (]: Began compiling node test.superstore.not_null_dim_dates_date_key.8dfe93e348
+[0m15:05:24.283747 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.superstore.agg_monthly_sales, now test.superstore.unique_dim_dates_date_key.61e1d0726d)
+[0m15:05:24.284775 [debug] [Thread-3 (]: On model.superstore.dim_products: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.dim_products"} */
+
+    
+
+    create  table
+      "dev"."main_dwh"."dim_products__dbt_tmp"
+  
+    
+    as (
+      
+
+select
+    product_id,
+    any_value(product_name) as product_name,
+    any_value(category) as category,
+    any_value(sub_category) as sub_category
+from "dev"."main_stg"."stg_superstore"
+group by product_id
+    );
+    
+  
+[0m15:05:24.292044 [debug] [Thread-2 (]: Writing injected SQL for node "test.superstore.not_null_dim_dates_date_key.8dfe93e348"
+[0m15:05:24.293052 [debug] [Thread-1 (]: Began compiling node test.superstore.unique_dim_dates_date_key.61e1d0726d
+[0m15:05:24.300084 [debug] [Thread-1 (]: Writing injected SQL for node "test.superstore.unique_dim_dates_date_key.61e1d0726d"
+[0m15:05:24.300615 [debug] [Thread-4 (]: Began executing node model.superstore.fact_sales
+[0m15:05:24.303621 [debug] [Thread-4 (]: Writing runtime sql for node "model.superstore.fact_sales"
+[0m15:05:24.304620 [debug] [Thread-3 (]: SQL status: OK in 0.012 seconds
+[0m15:05:24.306818 [debug] [Thread-3 (]: Using duckdb connection "model.superstore.dim_products"
+[0m15:05:24.307830 [debug] [Thread-3 (]: On model.superstore.dim_products: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.dim_products"} */
+alter table "dev"."main_dwh"."dim_products__dbt_tmp" rename to "dim_products"
+[0m15:05:24.308829 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m15:05:24.309820 [debug] [Thread-3 (]: On model.superstore.dim_products: COMMIT
+[0m15:05:24.309820 [debug] [Thread-1 (]: Began executing node test.superstore.unique_dim_dates_date_key.61e1d0726d
+[0m15:05:24.309820 [debug] [Thread-2 (]: Began executing node test.superstore.not_null_dim_dates_date_key.8dfe93e348
+[0m15:05:24.311337 [debug] [Thread-4 (]: Using duckdb connection "model.superstore.fact_sales"
+[0m15:05:24.312366 [debug] [Thread-3 (]: Using duckdb connection "model.superstore.dim_products"
+[0m15:05:24.313346 [debug] [Thread-1 (]: Writing runtime sql for node "test.superstore.unique_dim_dates_date_key.61e1d0726d"
+[0m15:05:24.316352 [debug] [Thread-2 (]: Writing runtime sql for node "test.superstore.not_null_dim_dates_date_key.8dfe93e348"
+[0m15:05:24.316352 [debug] [Thread-4 (]: On model.superstore.fact_sales: BEGIN
+[0m15:05:24.317555 [debug] [Thread-3 (]: On model.superstore.dim_products: COMMIT
+[0m15:05:24.318555 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:05:24.319560 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m15:05:24.319560 [debug] [Thread-1 (]: Using duckdb connection "test.superstore.unique_dim_dates_date_key.61e1d0726d"
+[0m15:05:24.321080 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.not_null_dim_dates_date_key.8dfe93e348"
+[0m15:05:24.321080 [debug] [Thread-4 (]: Using duckdb connection "model.superstore.fact_sales"
+[0m15:05:24.322098 [debug] [Thread-1 (]: On test.superstore.unique_dim_dates_date_key.61e1d0726d: BEGIN
+[0m15:05:24.322611 [debug] [Thread-2 (]: On test.superstore.not_null_dim_dates_date_key.8dfe93e348: BEGIN
+[0m15:05:24.322611 [debug] [Thread-4 (]: On model.superstore.fact_sales: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.fact_sales"} */
+
+    
+
+    create  table
+      "dev"."main_dwh"."fact_sales__dbt_tmp"
+  
+    
+    as (
+      
+
+select
+    s.row_id as sales_line_id,
+    s.order_id,
+    cast(strftime(s.order_date, '%Y%m%d') as integer) as order_date_key,
+    cast(strftime(s.ship_date, '%Y%m%d') as integer) as ship_date_key,
+    s.customer_id,
+    s.product_id,
+    md5(concat_ws('|', s.country, s.state, s.city, coalesce(s.postal_code, ''), s.region)) as location_key,
+    s.ship_mode,
+    s.quantity,
+    s.discount,
+    s.sales,
+    s.profit,
+    s.profit_margin,
+    s.shipping_days,
+    s.is_profitable
+from "dev"."main_stg"."stg_superstore" s
+    );
+    
+  
+[0m15:05:24.323624 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:05:24.324613 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:05:24.325621 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.325621 [debug] [Thread-1 (]: Using duckdb connection "test.superstore.unique_dim_dates_date_key.61e1d0726d"
+[0m15:05:24.325621 [debug] [Thread-1 (]: On test.superstore.unique_dim_dates_date_key.61e1d0726d: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.unique_dim_dates_date_key.61e1d0726d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    date_key as unique_field,
+    count(*) as n_records
+
+from "dev"."main_dwh"."dim_dates"
+where date_key is not null
+group by date_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.326673 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.326673 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.not_null_dim_dates_date_key.8dfe93e348"
+[0m15:05:24.327677 [debug] [Thread-2 (]: On test.superstore.not_null_dim_dates_date_key.8dfe93e348: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_dim_dates_date_key.8dfe93e348"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_key
+from "dev"."main_dwh"."dim_dates"
+where date_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.329672 [debug] [Thread-3 (]: SQL status: OK in 0.010 seconds
+[0m15:05:24.331671 [debug] [Thread-3 (]: Using duckdb connection "model.superstore.dim_products"
+[0m15:05:24.332671 [debug] [Thread-3 (]: On model.superstore.dim_products: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.dim_products"} */
+
+      drop table if exists "dev"."main_dwh"."dim_products__dbt_backup" cascade
+    
+[0m15:05:24.332671 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m15:05:24.332671 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m15:05:24.332671 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m15:05:24.335411 [debug] [Thread-1 (]: On test.superstore.unique_dim_dates_date_key.61e1d0726d: ROLLBACK
+[0m15:05:24.337413 [debug] [Thread-2 (]: On test.superstore.not_null_dim_dates_date_key.8dfe93e348: ROLLBACK
+[0m15:05:24.338479 [debug] [Thread-3 (]: On model.superstore.dim_products: Close
+[0m15:05:24.339476 [debug] [Thread-1 (]: On test.superstore.unique_dim_dates_date_key.61e1d0726d: Close
+[0m15:05:24.340480 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110F8FA2AB0>]}
+[0m15:05:24.341487 [debug] [Thread-2 (]: On test.superstore.not_null_dim_dates_date_key.8dfe93e348: Close
+[0m15:05:24.340480 [info ] [Thread-3 (]: 13 of 30 OK created sql table model main_dwh.dim_products ...................... [[32mOK[0m in 0.09s]
+[0m15:05:24.342482 [debug] [Thread-3 (]: Finished running node model.superstore.dim_products
+[0m15:05:24.341487 [info ] [Thread-1 (]: 16 of 30 PASS unique_dim_dates_date_key ........................................ [[32mPASS[0m in 0.06s]
+[0m15:05:24.343484 [debug] [Thread-3 (]: Began running node test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m15:05:24.344537 [debug] [Thread-1 (]: Finished running node test.superstore.unique_dim_dates_date_key.61e1d0726d
+[0m15:05:24.342482 [info ] [Thread-2 (]: 15 of 30 PASS not_null_dim_dates_date_key ...................................... [[32mPASS[0m in 0.06s]
+[0m15:05:24.345546 [debug] [Thread-1 (]: Began running node test.superstore.unique_dim_customers_customer_id.15c9f1e2fd
+[0m15:05:24.345546 [info ] [Thread-3 (]: 17 of 30 START test not_null_dim_customers_customer_id ......................... [RUN]
+[0m15:05:24.346547 [debug] [Thread-2 (]: Finished running node test.superstore.not_null_dim_dates_date_key.8dfe93e348
+[0m15:05:24.347544 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.superstore.dim_products, now test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d)
+[0m15:05:24.348553 [debug] [Thread-4 (]: SQL status: OK in 0.023 seconds
+[0m15:05:24.348553 [debug] [Thread-2 (]: Began running node test.superstore.not_null_dim_locations_location_key.375a9dc0f3
+[0m15:05:24.347544 [info ] [Thread-1 (]: 18 of 30 START test unique_dim_customers_customer_id ........................... [RUN]
+[0m15:05:24.349552 [debug] [Thread-3 (]: Began compiling node test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m15:05:24.351068 [debug] [Thread-4 (]: Using duckdb connection "model.superstore.fact_sales"
+[0m15:05:24.353085 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.superstore.unique_dim_dates_date_key.61e1d0726d, now test.superstore.unique_dim_customers_customer_id.15c9f1e2fd)
+[0m15:05:24.352081 [info ] [Thread-2 (]: 19 of 30 START test not_null_dim_locations_location_key ........................ [RUN]
+[0m15:05:24.359459 [debug] [Thread-3 (]: Writing injected SQL for node "test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m15:05:24.359459 [debug] [Thread-4 (]: On model.superstore.fact_sales: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.fact_sales"} */
+alter table "dev"."main_dwh"."fact_sales__dbt_tmp" rename to "fact_sales"
+[0m15:05:24.360440 [debug] [Thread-1 (]: Began compiling node test.superstore.unique_dim_customers_customer_id.15c9f1e2fd
+[0m15:05:24.361457 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_dim_dates_date_key.8dfe93e348, now test.superstore.not_null_dim_locations_location_key.375a9dc0f3)
+[0m15:05:24.367499 [debug] [Thread-1 (]: Writing injected SQL for node "test.superstore.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m15:05:24.368530 [debug] [Thread-2 (]: Began compiling node test.superstore.not_null_dim_locations_location_key.375a9dc0f3
+[0m15:05:24.368530 [debug] [Thread-4 (]: SQL status: OK in 0.007 seconds
+[0m15:05:24.375594 [debug] [Thread-2 (]: Writing injected SQL for node "test.superstore.not_null_dim_locations_location_key.375a9dc0f3"
+[0m15:05:24.375594 [debug] [Thread-3 (]: Began executing node test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m15:05:24.377614 [debug] [Thread-4 (]: On model.superstore.fact_sales: COMMIT
+[0m15:05:24.379624 [debug] [Thread-3 (]: Writing runtime sql for node "test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m15:05:24.380612 [debug] [Thread-1 (]: Began executing node test.superstore.unique_dim_customers_customer_id.15c9f1e2fd
+[0m15:05:24.380612 [debug] [Thread-4 (]: Using duckdb connection "model.superstore.fact_sales"
+[0m15:05:24.382631 [debug] [Thread-1 (]: Writing runtime sql for node "test.superstore.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m15:05:24.384166 [debug] [Thread-4 (]: On model.superstore.fact_sales: COMMIT
+[0m15:05:24.384702 [debug] [Thread-2 (]: Began executing node test.superstore.not_null_dim_locations_location_key.375a9dc0f3
+[0m15:05:24.384702 [debug] [Thread-3 (]: Using duckdb connection "test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m15:05:24.386236 [debug] [Thread-2 (]: Writing runtime sql for node "test.superstore.not_null_dim_locations_location_key.375a9dc0f3"
+[0m15:05:24.387753 [debug] [Thread-3 (]: On test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d: BEGIN
+[0m15:05:24.388770 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:05:24.389776 [debug] [Thread-1 (]: Using duckdb connection "test.superstore.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m15:05:24.389776 [debug] [Thread-1 (]: On test.superstore.unique_dim_customers_customer_id.15c9f1e2fd: BEGIN
+[0m15:05:24.389776 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:05:24.390771 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.not_null_dim_locations_location_key.375a9dc0f3"
+[0m15:05:24.390771 [debug] [Thread-2 (]: On test.superstore.not_null_dim_locations_location_key.375a9dc0f3: BEGIN
+[0m15:05:24.391768 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:05:24.391768 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.392772 [debug] [Thread-3 (]: Using duckdb connection "test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m15:05:24.392772 [debug] [Thread-3 (]: On test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from "dev"."main_dwh"."dim_customers"
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.393770 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m15:05:24.394775 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.394775 [debug] [Thread-1 (]: Using duckdb connection "test.superstore.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m15:05:24.395771 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.not_null_dim_locations_location_key.375a9dc0f3"
+[0m15:05:24.395771 [debug] [Thread-1 (]: On test.superstore.unique_dim_customers_customer_id.15c9f1e2fd: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.unique_dim_customers_customer_id.15c9f1e2fd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main_dwh"."dim_customers"
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.396769 [debug] [Thread-2 (]: On test.superstore.not_null_dim_locations_location_key.375a9dc0f3: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_dim_locations_location_key.375a9dc0f3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select location_key
+from "dev"."main_dwh"."dim_locations"
+where location_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.416215 [debug] [Thread-4 (]: SQL status: OK in 0.031 seconds
+[0m15:05:24.420289 [debug] [Thread-4 (]: Using duckdb connection "model.superstore.fact_sales"
+[0m15:05:24.421277 [debug] [Thread-2 (]: SQL status: OK in 0.024 seconds
+[0m15:05:24.421277 [debug] [Thread-3 (]: SQL status: OK in 0.028 seconds
+[0m15:05:24.421277 [debug] [Thread-1 (]: SQL status: OK in 0.025 seconds
+[0m15:05:24.422396 [debug] [Thread-4 (]: On model.superstore.fact_sales: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "model.superstore.fact_sales"} */
+
+      drop table if exists "dev"."main_dwh"."fact_sales__dbt_backup" cascade
+    
+[0m15:05:24.423392 [debug] [Thread-2 (]: On test.superstore.not_null_dim_locations_location_key.375a9dc0f3: ROLLBACK
+[0m15:05:24.424390 [debug] [Thread-3 (]: On test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d: ROLLBACK
+[0m15:05:24.427264 [debug] [Thread-1 (]: On test.superstore.unique_dim_customers_customer_id.15c9f1e2fd: ROLLBACK
+[0m15:05:24.427264 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.428793 [debug] [Thread-2 (]: On test.superstore.not_null_dim_locations_location_key.375a9dc0f3: Close
+[0m15:05:24.430813 [debug] [Thread-4 (]: On model.superstore.fact_sales: Close
+[0m15:05:24.431809 [info ] [Thread-2 (]: 19 of 30 PASS not_null_dim_locations_location_key .............................. [[32mPASS[0m in 0.07s]
+[0m15:05:24.430813 [debug] [Thread-1 (]: On test.superstore.unique_dim_customers_customer_id.15c9f1e2fd: Close
+[0m15:05:24.430813 [debug] [Thread-3 (]: On test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d: Close
+[0m15:05:24.432807 [debug] [Thread-2 (]: Finished running node test.superstore.not_null_dim_locations_location_key.375a9dc0f3
+[0m15:05:24.434321 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e6462adf-bb0e-43bb-89b0-cb80cbbd7ffb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FDD07C50>]}
+[0m15:05:24.434847 [info ] [Thread-1 (]: 18 of 30 PASS unique_dim_customers_customer_id ................................. [[32mPASS[0m in 0.08s]
+[0m15:05:24.435859 [debug] [Thread-2 (]: Began running node test.superstore.unique_dim_locations_location_key.9d6de2f887
+[0m15:05:24.435859 [info ] [Thread-3 (]: 17 of 30 PASS not_null_dim_customers_customer_id ............................... [[32mPASS[0m in 0.09s]
+[0m15:05:24.438387 [debug] [Thread-1 (]: Finished running node test.superstore.unique_dim_customers_customer_id.15c9f1e2fd
+[0m15:05:24.437370 [info ] [Thread-4 (]: 14 of 30 OK created sql table model main_dwh.fact_sales ........................ [[32mOK[0m in 0.16s]
+[0m15:05:24.439386 [info ] [Thread-2 (]: 20 of 30 START test unique_dim_locations_location_key .......................... [RUN]
+[0m15:05:24.439900 [debug] [Thread-3 (]: Finished running node test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m15:05:24.439900 [debug] [Thread-1 (]: Began running node test.superstore.not_null_dim_products_product_id.c8aba288d1
+[0m15:05:24.440914 [debug] [Thread-4 (]: Finished running node model.superstore.fact_sales
+[0m15:05:24.440914 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_dim_locations_location_key.375a9dc0f3, now test.superstore.unique_dim_locations_location_key.9d6de2f887)
+[0m15:05:24.441913 [debug] [Thread-3 (]: Began running node test.superstore.unique_dim_products_product_id.ef7b2a9985
+[0m15:05:24.442916 [info ] [Thread-1 (]: 21 of 30 START test not_null_dim_products_product_id ........................... [RUN]
+[0m15:05:24.443905 [debug] [Thread-2 (]: Began compiling node test.superstore.unique_dim_locations_location_key.9d6de2f887
+[0m15:05:24.443905 [debug] [Thread-4 (]: Began running node test.superstore.not_null_fact_sales_customer_id.39febb61fd
+[0m15:05:24.444913 [info ] [Thread-3 (]: 22 of 30 START test unique_dim_products_product_id ............................. [RUN]
+[0m15:05:24.445905 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.superstore.unique_dim_customers_customer_id.15c9f1e2fd, now test.superstore.not_null_dim_products_product_id.c8aba288d1)
+[0m15:05:24.452947 [debug] [Thread-2 (]: Writing injected SQL for node "test.superstore.unique_dim_locations_location_key.9d6de2f887"
+[0m15:05:24.453946 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d, now test.superstore.unique_dim_products_product_id.ef7b2a9985)
+[0m15:05:24.453946 [info ] [Thread-4 (]: 23 of 30 START test not_null_fact_sales_customer_id ............................ [RUN]
+[0m15:05:24.455429 [debug] [Thread-1 (]: Began compiling node test.superstore.not_null_dim_products_product_id.c8aba288d1
+[0m15:05:24.456428 [debug] [Thread-3 (]: Began compiling node test.superstore.unique_dim_products_product_id.ef7b2a9985
+[0m15:05:24.457429 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.superstore.fact_sales, now test.superstore.not_null_fact_sales_customer_id.39febb61fd)
+[0m15:05:24.467233 [debug] [Thread-1 (]: Writing injected SQL for node "test.superstore.not_null_dim_products_product_id.c8aba288d1"
+[0m15:05:24.467233 [debug] [Thread-2 (]: Began executing node test.superstore.unique_dim_locations_location_key.9d6de2f887
+[0m15:05:24.475295 [debug] [Thread-3 (]: Writing injected SQL for node "test.superstore.unique_dim_products_product_id.ef7b2a9985"
+[0m15:05:24.476306 [debug] [Thread-4 (]: Began compiling node test.superstore.not_null_fact_sales_customer_id.39febb61fd
+[0m15:05:24.478304 [debug] [Thread-2 (]: Writing runtime sql for node "test.superstore.unique_dim_locations_location_key.9d6de2f887"
+[0m15:05:24.487449 [debug] [Thread-4 (]: Writing injected SQL for node "test.superstore.not_null_fact_sales_customer_id.39febb61fd"
+[0m15:05:24.489466 [debug] [Thread-3 (]: Began executing node test.superstore.unique_dim_products_product_id.ef7b2a9985
+[0m15:05:24.489466 [debug] [Thread-1 (]: Began executing node test.superstore.not_null_dim_products_product_id.c8aba288d1
+[0m15:05:24.491458 [debug] [Thread-3 (]: Writing runtime sql for node "test.superstore.unique_dim_products_product_id.ef7b2a9985"
+[0m15:05:24.493995 [debug] [Thread-1 (]: Writing runtime sql for node "test.superstore.not_null_dim_products_product_id.c8aba288d1"
+[0m15:05:24.495002 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.unique_dim_locations_location_key.9d6de2f887"
+[0m15:05:24.495989 [debug] [Thread-4 (]: Began executing node test.superstore.not_null_fact_sales_customer_id.39febb61fd
+[0m15:05:24.495989 [debug] [Thread-2 (]: On test.superstore.unique_dim_locations_location_key.9d6de2f887: BEGIN
+[0m15:05:24.497986 [debug] [Thread-4 (]: Writing runtime sql for node "test.superstore.not_null_fact_sales_customer_id.39febb61fd"
+[0m15:05:24.498984 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:05:24.499985 [debug] [Thread-3 (]: Using duckdb connection "test.superstore.unique_dim_products_product_id.ef7b2a9985"
+[0m15:05:24.499985 [debug] [Thread-3 (]: On test.superstore.unique_dim_products_product_id.ef7b2a9985: BEGIN
+[0m15:05:24.501023 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:05:24.501023 [debug] [Thread-1 (]: Using duckdb connection "test.superstore.not_null_dim_products_product_id.c8aba288d1"
+[0m15:05:24.502027 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.502027 [debug] [Thread-1 (]: On test.superstore.not_null_dim_products_product_id.c8aba288d1: BEGIN
+[0m15:05:24.502027 [debug] [Thread-4 (]: Using duckdb connection "test.superstore.not_null_fact_sales_customer_id.39febb61fd"
+[0m15:05:24.503534 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.504057 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.unique_dim_locations_location_key.9d6de2f887"
+[0m15:05:24.504057 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:05:24.505071 [debug] [Thread-4 (]: On test.superstore.not_null_fact_sales_customer_id.39febb61fd: BEGIN
+[0m15:05:24.505071 [debug] [Thread-3 (]: Using duckdb connection "test.superstore.unique_dim_products_product_id.ef7b2a9985"
+[0m15:05:24.506081 [debug] [Thread-2 (]: On test.superstore.unique_dim_locations_location_key.9d6de2f887: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.unique_dim_locations_location_key.9d6de2f887"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    location_key as unique_field,
+    count(*) as n_records
+
+from "dev"."main_dwh"."dim_locations"
+where location_key is not null
+group by location_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.507078 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:05:24.507078 [debug] [Thread-3 (]: On test.superstore.unique_dim_products_product_id.ef7b2a9985: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.unique_dim_products_product_id.ef7b2a9985"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    product_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main_dwh"."dim_products"
+where product_id is not null
+group by product_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.508078 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.509090 [debug] [Thread-1 (]: Using duckdb connection "test.superstore.not_null_dim_products_product_id.c8aba288d1"
+[0m15:05:24.509090 [debug] [Thread-1 (]: On test.superstore.not_null_dim_products_product_id.c8aba288d1: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_dim_products_product_id.c8aba288d1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_id
+from "dev"."main_dwh"."dim_products"
+where product_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.510079 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.511077 [debug] [Thread-4 (]: Using duckdb connection "test.superstore.not_null_fact_sales_customer_id.39febb61fd"
+[0m15:05:24.511077 [debug] [Thread-4 (]: On test.superstore.not_null_fact_sales_customer_id.39febb61fd: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_fact_sales_customer_id.39febb61fd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from "dev"."main_dwh"."fact_sales"
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.512078 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m15:05:24.513080 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m15:05:24.513080 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.513080 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m15:05:24.515364 [debug] [Thread-2 (]: On test.superstore.unique_dim_locations_location_key.9d6de2f887: ROLLBACK
+[0m15:05:24.516360 [debug] [Thread-3 (]: On test.superstore.unique_dim_products_product_id.ef7b2a9985: ROLLBACK
+[0m15:05:24.518353 [debug] [Thread-1 (]: On test.superstore.not_null_dim_products_product_id.c8aba288d1: ROLLBACK
+[0m15:05:24.519355 [debug] [Thread-4 (]: On test.superstore.not_null_fact_sales_customer_id.39febb61fd: ROLLBACK
+[0m15:05:24.520867 [debug] [Thread-3 (]: On test.superstore.unique_dim_products_product_id.ef7b2a9985: Close
+[0m15:05:24.521880 [debug] [Thread-2 (]: On test.superstore.unique_dim_locations_location_key.9d6de2f887: Close
+[0m15:05:24.522875 [debug] [Thread-4 (]: On test.superstore.not_null_fact_sales_customer_id.39febb61fd: Close
+[0m15:05:24.522875 [debug] [Thread-1 (]: On test.superstore.not_null_dim_products_product_id.c8aba288d1: Close
+[0m15:05:24.522875 [info ] [Thread-3 (]: 22 of 30 PASS unique_dim_products_product_id ................................... [[32mPASS[0m in 0.07s]
+[0m15:05:24.524879 [info ] [Thread-2 (]: 20 of 30 PASS unique_dim_locations_location_key ................................ [[32mPASS[0m in 0.08s]
+[0m15:05:24.524879 [info ] [Thread-4 (]: 23 of 30 PASS not_null_fact_sales_customer_id .................................. [[32mPASS[0m in 0.07s]
+[0m15:05:24.526666 [debug] [Thread-3 (]: Finished running node test.superstore.unique_dim_products_product_id.ef7b2a9985
+[0m15:05:24.524879 [info ] [Thread-1 (]: 21 of 30 PASS not_null_dim_products_product_id ................................. [[32mPASS[0m in 0.08s]
+[0m15:05:24.527679 [debug] [Thread-2 (]: Finished running node test.superstore.unique_dim_locations_location_key.9d6de2f887
+[0m15:05:24.527679 [debug] [Thread-4 (]: Finished running node test.superstore.not_null_fact_sales_customer_id.39febb61fd
+[0m15:05:24.527679 [debug] [Thread-3 (]: Began running node test.superstore.not_null_fact_sales_location_key.7da02be8cc
+[0m15:05:24.528675 [debug] [Thread-1 (]: Finished running node test.superstore.not_null_dim_products_product_id.c8aba288d1
+[0m15:05:24.528675 [debug] [Thread-2 (]: Began running node test.superstore.not_null_fact_sales_product_id.39101802a8
+[0m15:05:24.529676 [debug] [Thread-4 (]: Began running node test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9
+[0m15:05:24.530673 [debug] [Thread-1 (]: Began running node test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m15:05:24.529676 [info ] [Thread-3 (]: 24 of 30 START test not_null_fact_sales_location_key ........................... [RUN]
+[0m15:05:24.530673 [info ] [Thread-2 (]: 25 of 30 START test not_null_fact_sales_product_id ............................. [RUN]
+[0m15:05:24.531677 [info ] [Thread-4 (]: 26 of 30 START test not_null_fact_sales_sales_line_id .......................... [RUN]
+[0m15:05:24.532677 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.superstore.unique_dim_products_product_id.ef7b2a9985, now test.superstore.not_null_fact_sales_location_key.7da02be8cc)
+[0m15:05:24.531677 [info ] [Thread-1 (]: 27 of 30 START test relationships_fact_sales_customer_id__customer_id__ref_dim_customers_  [RUN]
+[0m15:05:24.532677 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.superstore.unique_dim_locations_location_key.9d6de2f887, now test.superstore.not_null_fact_sales_product_id.39101802a8)
+[0m15:05:24.533676 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_fact_sales_customer_id.39febb61fd, now test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9)
+[0m15:05:24.533933 [debug] [Thread-3 (]: Began compiling node test.superstore.not_null_fact_sales_location_key.7da02be8cc
+[0m15:05:24.533933 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_dim_products_product_id.c8aba288d1, now test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47)
+[0m15:05:24.533933 [debug] [Thread-2 (]: Began compiling node test.superstore.not_null_fact_sales_product_id.39101802a8
+[0m15:05:24.535463 [debug] [Thread-4 (]: Began compiling node test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9
+[0m15:05:24.541553 [debug] [Thread-3 (]: Writing injected SQL for node "test.superstore.not_null_fact_sales_location_key.7da02be8cc"
+[0m15:05:24.542540 [debug] [Thread-1 (]: Began compiling node test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m15:05:24.549070 [debug] [Thread-2 (]: Writing injected SQL for node "test.superstore.not_null_fact_sales_product_id.39101802a8"
+[0m15:05:24.555180 [debug] [Thread-4 (]: Writing injected SQL for node "test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9"
+[0m15:05:24.565703 [debug] [Thread-1 (]: Writing injected SQL for node "test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"
+[0m15:05:24.568573 [debug] [Thread-3 (]: Began executing node test.superstore.not_null_fact_sales_location_key.7da02be8cc
+[0m15:05:24.569589 [debug] [Thread-2 (]: Began executing node test.superstore.not_null_fact_sales_product_id.39101802a8
+[0m15:05:24.570584 [debug] [Thread-3 (]: Writing runtime sql for node "test.superstore.not_null_fact_sales_location_key.7da02be8cc"
+[0m15:05:24.573817 [debug] [Thread-2 (]: Writing runtime sql for node "test.superstore.not_null_fact_sales_product_id.39101802a8"
+[0m15:05:24.591472 [debug] [Thread-4 (]: Began executing node test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9
+[0m15:05:24.592464 [debug] [Thread-1 (]: Began executing node test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m15:05:24.594473 [debug] [Thread-4 (]: Writing runtime sql for node "test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9"
+[0m15:05:24.595536 [debug] [Thread-3 (]: Using duckdb connection "test.superstore.not_null_fact_sales_location_key.7da02be8cc"
+[0m15:05:24.597461 [debug] [Thread-1 (]: Writing runtime sql for node "test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"
+[0m15:05:24.598644 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.not_null_fact_sales_product_id.39101802a8"
+[0m15:05:24.599151 [debug] [Thread-3 (]: On test.superstore.not_null_fact_sales_location_key.7da02be8cc: BEGIN
+[0m15:05:24.600162 [debug] [Thread-2 (]: On test.superstore.not_null_fact_sales_product_id.39101802a8: BEGIN
+[0m15:05:24.601165 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:05:24.602164 [debug] [Thread-4 (]: Using duckdb connection "test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9"
+[0m15:05:24.602164 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:05:24.603179 [debug] [Thread-1 (]: Using duckdb connection "test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"
+[0m15:05:24.603179 [debug] [Thread-4 (]: On test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9: BEGIN
+[0m15:05:24.604173 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.604688 [debug] [Thread-1 (]: On test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47: BEGIN
+[0m15:05:24.605691 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:05:24.605691 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.605691 [debug] [Thread-3 (]: Using duckdb connection "test.superstore.not_null_fact_sales_location_key.7da02be8cc"
+[0m15:05:24.606697 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:05:24.606697 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.not_null_fact_sales_product_id.39101802a8"
+[0m15:05:24.607698 [debug] [Thread-3 (]: On test.superstore.not_null_fact_sales_location_key.7da02be8cc: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_fact_sales_location_key.7da02be8cc"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select location_key
+from "dev"."main_dwh"."fact_sales"
+where location_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.607698 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.608698 [debug] [Thread-2 (]: On test.superstore.not_null_fact_sales_product_id.39101802a8: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_fact_sales_product_id.39101802a8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_id
+from "dev"."main_dwh"."fact_sales"
+where product_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.608698 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.610202 [debug] [Thread-4 (]: Using duckdb connection "test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9"
+[0m15:05:24.610202 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m15:05:24.611232 [debug] [Thread-1 (]: Using duckdb connection "test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"
+[0m15:05:24.611232 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m15:05:24.612207 [debug] [Thread-4 (]: On test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sales_line_id
+from "dev"."main_dwh"."fact_sales"
+where sales_line_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.612207 [debug] [Thread-1 (]: On test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select customer_id as from_field
+    from "dev"."main_dwh"."fact_sales"
+    where customer_id is not null
+),
+
+parent as (
+    select customer_id as to_field
+    from "dev"."main_dwh"."dim_customers"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.613218 [debug] [Thread-3 (]: On test.superstore.not_null_fact_sales_location_key.7da02be8cc: ROLLBACK
+[0m15:05:24.615218 [debug] [Thread-2 (]: On test.superstore.not_null_fact_sales_product_id.39101802a8: ROLLBACK
+[0m15:05:24.616208 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.617210 [debug] [Thread-3 (]: On test.superstore.not_null_fact_sales_location_key.7da02be8cc: Close
+[0m15:05:24.617210 [debug] [Thread-2 (]: On test.superstore.not_null_fact_sales_product_id.39101802a8: Close
+[0m15:05:24.619695 [debug] [Thread-4 (]: On test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9: ROLLBACK
+[0m15:05:24.618685 [info ] [Thread-3 (]: 24 of 30 PASS not_null_fact_sales_location_key ................................. [[32mPASS[0m in 0.09s]
+[0m15:05:24.620684 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m15:05:24.620684 [info ] [Thread-2 (]: 25 of 30 PASS not_null_fact_sales_product_id ................................... [[32mPASS[0m in 0.09s]
+[0m15:05:24.621971 [debug] [Thread-3 (]: Finished running node test.superstore.not_null_fact_sales_location_key.7da02be8cc
+[0m15:05:24.622970 [debug] [Thread-4 (]: On test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9: Close
+[0m15:05:24.622970 [debug] [Thread-2 (]: Finished running node test.superstore.not_null_fact_sales_product_id.39101802a8
+[0m15:05:24.624979 [debug] [Thread-1 (]: On test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47: ROLLBACK
+[0m15:05:24.624979 [debug] [Thread-3 (]: Began running node test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068
+[0m15:05:24.627501 [debug] [Thread-2 (]: Began running node test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m15:05:24.626487 [info ] [Thread-4 (]: 26 of 30 PASS not_null_fact_sales_sales_line_id ................................ [[32mPASS[0m in 0.09s]
+[0m15:05:24.628498 [info ] [Thread-3 (]: 28 of 30 START test relationships_fact_sales_location_key__location_key__ref_dim_locations_  [RUN]
+[0m15:05:24.629513 [debug] [Thread-1 (]: On test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47: Close
+[0m15:05:24.630498 [debug] [Thread-4 (]: Finished running node test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9
+[0m15:05:24.629513 [info ] [Thread-2 (]: 29 of 30 START test relationships_fact_sales_product_id__product_id__ref_dim_products_  [RUN]
+[0m15:05:24.631501 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_fact_sales_location_key.7da02be8cc, now test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068)
+[0m15:05:24.633034 [debug] [Thread-4 (]: Began running node test.superstore.unique_fact_sales_sales_line_id.f06bce88c4
+[0m15:05:24.632023 [info ] [Thread-1 (]: 27 of 30 PASS relationships_fact_sales_customer_id__customer_id__ref_dim_customers_  [[32mPASS[0m in 0.10s]
+[0m15:05:24.633034 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_fact_sales_product_id.39101802a8, now test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b)
+[0m15:05:24.634033 [debug] [Thread-3 (]: Began compiling node test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068
+[0m15:05:24.635035 [info ] [Thread-4 (]: 30 of 30 START test unique_fact_sales_sales_line_id ............................ [RUN]
+[0m15:05:24.636028 [debug] [Thread-1 (]: Finished running node test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m15:05:24.636028 [debug] [Thread-2 (]: Began compiling node test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m15:05:24.646183 [debug] [Thread-3 (]: Writing injected SQL for node "test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068"
+[0m15:05:24.647106 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9, now test.superstore.unique_fact_sales_sales_line_id.f06bce88c4)
+[0m15:05:24.658152 [debug] [Thread-2 (]: Writing injected SQL for node "test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"
+[0m15:05:24.659146 [debug] [Thread-4 (]: Began compiling node test.superstore.unique_fact_sales_sales_line_id.f06bce88c4
+[0m15:05:24.665261 [debug] [Thread-4 (]: Writing injected SQL for node "test.superstore.unique_fact_sales_sales_line_id.f06bce88c4"
+[0m15:05:24.665261 [debug] [Thread-3 (]: Began executing node test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068
+[0m15:05:24.667264 [debug] [Thread-3 (]: Writing runtime sql for node "test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068"
+[0m15:05:24.668255 [debug] [Thread-2 (]: Began executing node test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m15:05:24.669254 [debug] [Thread-2 (]: Writing runtime sql for node "test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"
+[0m15:05:24.670761 [debug] [Thread-4 (]: Began executing node test.superstore.unique_fact_sales_sales_line_id.f06bce88c4
+[0m15:05:24.672778 [debug] [Thread-4 (]: Writing runtime sql for node "test.superstore.unique_fact_sales_sales_line_id.f06bce88c4"
+[0m15:05:24.674306 [debug] [Thread-3 (]: Using duckdb connection "test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068"
+[0m15:05:24.675316 [debug] [Thread-3 (]: On test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068: BEGIN
+[0m15:05:24.675316 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"
+[0m15:05:24.675316 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:05:24.676316 [debug] [Thread-2 (]: On test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b: BEGIN
+[0m15:05:24.677325 [debug] [Thread-4 (]: Using duckdb connection "test.superstore.unique_fact_sales_sales_line_id.f06bce88c4"
+[0m15:05:24.677325 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:05:24.677325 [debug] [Thread-4 (]: On test.superstore.unique_fact_sales_sales_line_id.f06bce88c4: BEGIN
+[0m15:05:24.678324 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.678324 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:05:24.679334 [debug] [Thread-3 (]: Using duckdb connection "test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068"
+[0m15:05:24.680324 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.680324 [debug] [Thread-3 (]: On test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select location_key as from_field
+    from "dev"."main_dwh"."fact_sales"
+    where location_key is not null
+),
+
+parent as (
+    select location_key as to_field
+    from "dev"."main_dwh"."dim_locations"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.680324 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.681324 [debug] [Thread-2 (]: Using duckdb connection "test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"
+[0m15:05:24.681850 [debug] [Thread-4 (]: Using duckdb connection "test.superstore.unique_fact_sales_sales_line_id.f06bce88c4"
+[0m15:05:24.681850 [debug] [Thread-2 (]: On test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select product_id as from_field
+    from "dev"."main_dwh"."fact_sales"
+    where product_id is not null
+),
+
+parent as (
+    select product_id as to_field
+    from "dev"."main_dwh"."dim_products"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.682870 [debug] [Thread-4 (]: On test.superstore.unique_fact_sales_sales_line_id.f06bce88c4: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "node_id": "test.superstore.unique_fact_sales_sales_line_id.f06bce88c4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    sales_line_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main_dwh"."fact_sales"
+where sales_line_id is not null
+group by sales_line_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:05:24.683866 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m15:05:24.685379 [debug] [Thread-3 (]: On test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068: ROLLBACK
+[0m15:05:24.687383 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m15:05:24.687383 [debug] [Thread-3 (]: On test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068: Close
+[0m15:05:24.688633 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m15:05:24.689627 [debug] [Thread-4 (]: On test.superstore.unique_fact_sales_sales_line_id.f06bce88c4: ROLLBACK
+[0m15:05:24.688633 [info ] [Thread-3 (]: 28 of 30 PASS relationships_fact_sales_location_key__location_key__ref_dim_locations_  [[32mPASS[0m in 0.06s]
+[0m15:05:24.692627 [debug] [Thread-2 (]: On test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b: ROLLBACK
+[0m15:05:24.692627 [debug] [Thread-3 (]: Finished running node test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068
+[0m15:05:24.692627 [debug] [Thread-4 (]: On test.superstore.unique_fact_sales_sales_line_id.f06bce88c4: Close
+[0m15:05:24.695153 [debug] [Thread-2 (]: On test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b: Close
+[0m15:05:24.693638 [info ] [Thread-4 (]: 30 of 30 PASS unique_fact_sales_sales_line_id .................................. [[32mPASS[0m in 0.05s]
+[0m15:05:24.697173 [debug] [Thread-4 (]: Finished running node test.superstore.unique_fact_sales_sales_line_id.f06bce88c4
+[0m15:05:24.696175 [info ] [Thread-2 (]: 29 of 30 PASS relationships_fact_sales_product_id__product_id__ref_dim_products_  [[32mPASS[0m in 0.06s]
+[0m15:05:24.698162 [debug] [Thread-2 (]: Finished running node test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m15:05:24.699164 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:05:24.700164 [debug] [MainThread]: On master: BEGIN
+[0m15:05:24.700164 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:05:24.700164 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:05:24.701251 [debug] [MainThread]: On master: COMMIT
+[0m15:05:24.701251 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:05:24.701251 [debug] [MainThread]: On master: COMMIT
+[0m15:05:24.702244 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:05:24.702244 [debug] [MainThread]: On master: Close
+[0m15:05:24.702244 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:05:24.702244 [debug] [MainThread]: Connection 'create_dev_main_stg' was properly closed.
+[0m15:05:24.702244 [debug] [MainThread]: Connection 'create_dev_main_dwh' was properly closed.
+[0m15:05:24.703765 [debug] [MainThread]: Connection 'list_dev_main_dwh' was properly closed.
+[0m15:05:24.703765 [debug] [MainThread]: Connection 'list_dev_main_stg' was properly closed.
+[0m15:05:24.703765 [debug] [MainThread]: Connection 'test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47' was properly closed.
+[0m15:05:24.703765 [debug] [MainThread]: Connection 'test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068' was properly closed.
+[0m15:05:24.703765 [debug] [MainThread]: Connection 'test.superstore.unique_fact_sales_sales_line_id.f06bce88c4' was properly closed.
+[0m15:05:24.704792 [debug] [MainThread]: Connection 'test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b' was properly closed.
+[0m15:05:24.704792 [info ] [MainThread]: 
+[0m15:05:24.704792 [info ] [MainThread]: Finished running 6 table models, 23 data tests, 1 view model in 0 hours 0 minutes and 1.17 seconds (1.17s).
+[0m15:05:24.709338 [debug] [MainThread]: Command end result
+[0m15:05:24.748509 [debug] [MainThread]: Wrote artifact WritableManifest to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\manifest.json
+[0m15:05:24.752541 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\semantic_manifest.json
+[0m15:05:24.756093 [debug] [MainThread]: Wrote artifact OsiDocument to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\osi_document.json
+[0m15:05:24.763652 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\run_results.json
+[0m15:05:24.764662 [info ] [MainThread]: 
+[0m15:05:24.764662 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:05:24.765664 [info ] [MainThread]: 
+[0m15:05:24.766662 [info ] [MainThread]: Done. PASS=30 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=30
+[0m15:05:24.767665 [debug] [MainThread]: Command `dbt build` succeeded at 15:05:24.767665 after 3.75 seconds
+[0m15:05:24.767665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FB65A540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FDFBD760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000110FF10E4E0>]}
+[0m15:05:24.767665 [debug] [MainThread]: Flushing usage events
+[0m15:05:25.655864 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:44:47.211731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001556B8229C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001556733E540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015569EE9550>]}
+
+
+============================== 15:44:47.289874 | bf967706-83c6-40f4-84fe-dfc5726f2742 ==============================
+[0m15:44:47.289874 [info ] [MainThread]: Running with dbt=1.12.5
+[0m15:44:47.292435 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'D:\\NTI - 2026\\projects\\HW_dbtWithDuck\\superstore_airflow_dbt_duckdb\\superstore_pipeline\\dbt_superstore', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt docs generate', 'log_path': 'D:\\NTI - 2026\\projects\\HW_dbtWithDuck\\superstore_airflow_dbt_duckdb\\superstore_pipeline\\dbt_superstore\\logs'}
+[0m15:44:49.909890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bf967706-83c6-40f4-84fe-dfc5726f2742', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001556B89FA10>]}
+[0m15:44:50.138071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bf967706-83c6-40f4-84fe-dfc5726f2742', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001556BB245C0>]}
+[0m15:44:50.165185 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m15:44:51.535371 [debug] [MainThread]: checksum: 901c0af6b1813cd6c43cdfbcc6e9fc9140d41b0d499af91a71613f5fd321d71d, vars: {}, profile: superstore, target: dev, version: 1.12.5
+[0m15:44:52.199703 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:44:52.201704 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:44:52.202702 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:44:52.236385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bf967706-83c6-40f4-84fe-dfc5726f2742', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000155696D6A80>]}
+[0m15:44:52.487069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bf967706-83c6-40f4-84fe-dfc5726f2742', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001556C345070>]}
+[0m15:44:52.488607 [info ] [MainThread]: Found 7 models, 23 data tests, 1 source, 500 macros
+[0m15:44:52.489608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bf967706-83c6-40f4-84fe-dfc5726f2742', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001556BDFD490>]}
+[0m15:44:52.499259 [info ] [MainThread]: 
+[0m15:44:52.500262 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:44:52.502263 [info ] [MainThread]: 
+[0m15:44:52.504774 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:44:52.527297 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main_stg'
+[0m15:44:52.539492 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main_dwh'
+[0m15:44:53.089373 [debug] [ThreadPool]: Using duckdb connection "list_dev_main_dwh"
+[0m15:44:53.089373 [debug] [ThreadPool]: Using duckdb connection "list_dev_main_stg"
+[0m15:44:53.091424 [debug] [ThreadPool]: On list_dev_main_dwh: BEGIN
+[0m15:44:53.092440 [debug] [ThreadPool]: On list_dev_main_stg: BEGIN
+[0m15:44:53.093949 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:44:53.094459 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:44:53.227433 [debug] [ThreadPool]: SQL status: OK in 0.132 seconds
+[0m15:44:53.229434 [debug] [ThreadPool]: Using duckdb connection "list_dev_main_stg"
+[0m15:44:53.230467 [debug] [ThreadPool]: SQL status: OK in 0.136 seconds
+[0m15:44:53.231491 [debug] [ThreadPool]: On list_dev_main_stg: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "connection_name": "list_dev_main_stg"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_stg'
+    and lower(table_catalog) = 'dev'
+  
+[0m15:44:53.233517 [debug] [ThreadPool]: Using duckdb connection "list_dev_main_dwh"
+[0m15:44:53.235510 [debug] [ThreadPool]: On list_dev_main_dwh: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "connection_name": "list_dev_main_dwh"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_dwh'
+    and lower(table_catalog) = 'dev'
+  
+[0m15:44:53.257697 [debug] [ThreadPool]: SQL status: OK in 0.023 seconds
+[0m15:44:53.259706 [debug] [ThreadPool]: SQL status: OK in 0.022 seconds
+[0m15:44:53.264259 [debug] [ThreadPool]: On list_dev_main_stg: ROLLBACK
+[0m15:44:53.269256 [debug] [ThreadPool]: On list_dev_main_dwh: ROLLBACK
+[0m15:44:53.272258 [debug] [ThreadPool]: On list_dev_main_stg: Close
+[0m15:44:53.274168 [debug] [ThreadPool]: On list_dev_main_dwh: Close
+[0m15:44:53.283399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bf967706-83c6-40f4-84fe-dfc5726f2742', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001556C04DA60>]}
+[0m15:44:53.304141 [debug] [Thread-1 (]: Began running node model.superstore.stg_superstore
+[0m15:44:53.306710 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.superstore.stg_superstore'
+[0m15:44:53.308253 [debug] [Thread-1 (]: Began compiling node model.superstore.stg_superstore
+[0m15:44:53.335135 [debug] [Thread-1 (]: Writing injected SQL for node "model.superstore.stg_superstore"
+[0m15:44:53.337543 [debug] [Thread-1 (]: Began executing node model.superstore.stg_superstore
+[0m15:44:53.341107 [debug] [Thread-1 (]: Finished running node model.superstore.stg_superstore
+[0m15:44:53.344629 [debug] [Thread-3 (]: Began running node model.superstore.agg_monthly_sales
+[0m15:44:53.346658 [debug] [Thread-4 (]: Began running node model.superstore.dim_customers
+[0m15:44:53.348319 [debug] [Thread-2 (]: Began running node model.superstore.dim_dates
+[0m15:44:53.350340 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.superstore.agg_monthly_sales'
+[0m15:44:53.351335 [debug] [Thread-1 (]: Began running node model.superstore.dim_locations
+[0m15:44:53.353334 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.superstore.dim_customers'
+[0m15:44:53.355901 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.superstore.dim_dates'
+[0m15:44:53.357421 [debug] [Thread-3 (]: Began compiling node model.superstore.agg_monthly_sales
+[0m15:44:53.359582 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.superstore.stg_superstore, now model.superstore.dim_locations)
+[0m15:44:53.360575 [debug] [Thread-4 (]: Began compiling node model.superstore.dim_customers
+[0m15:44:53.362574 [debug] [Thread-2 (]: Began compiling node model.superstore.dim_dates
+[0m15:44:53.370132 [debug] [Thread-3 (]: Writing injected SQL for node "model.superstore.agg_monthly_sales"
+[0m15:44:53.371648 [debug] [Thread-1 (]: Began compiling node model.superstore.dim_locations
+[0m15:44:53.378843 [debug] [Thread-4 (]: Writing injected SQL for node "model.superstore.dim_customers"
+[0m15:44:53.386382 [debug] [Thread-2 (]: Writing injected SQL for node "model.superstore.dim_dates"
+[0m15:44:53.394617 [debug] [Thread-1 (]: Writing injected SQL for node "model.superstore.dim_locations"
+[0m15:44:53.398154 [debug] [Thread-3 (]: Began executing node model.superstore.agg_monthly_sales
+[0m15:44:53.402733 [debug] [Thread-3 (]: Finished running node model.superstore.agg_monthly_sales
+[0m15:44:53.405273 [debug] [Thread-3 (]: Began running node model.superstore.dim_products
+[0m15:44:53.407792 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.superstore.agg_monthly_sales, now model.superstore.dim_products)
+[0m15:44:53.410882 [debug] [Thread-2 (]: Began executing node model.superstore.dim_dates
+[0m15:44:53.414077 [debug] [Thread-4 (]: Began executing node model.superstore.dim_customers
+[0m15:44:53.415437 [debug] [Thread-3 (]: Began compiling node model.superstore.dim_products
+[0m15:44:53.421485 [debug] [Thread-2 (]: Finished running node model.superstore.dim_dates
+[0m15:44:53.423522 [debug] [Thread-1 (]: Began executing node model.superstore.dim_locations
+[0m15:44:53.425525 [debug] [Thread-4 (]: Finished running node model.superstore.dim_customers
+[0m15:44:53.432585 [debug] [Thread-3 (]: Writing injected SQL for node "model.superstore.dim_products"
+[0m15:44:53.434121 [debug] [Thread-2 (]: Began running node model.superstore.fact_sales
+[0m15:44:53.437125 [debug] [Thread-1 (]: Finished running node model.superstore.dim_locations
+[0m15:44:53.439339 [debug] [Thread-4 (]: Began running node test.superstore.not_null_stg_superstore_customer_id.be943af154
+[0m15:44:53.441346 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.superstore.dim_dates, now model.superstore.fact_sales)
+[0m15:44:53.443885 [debug] [Thread-1 (]: Began running node test.superstore.not_null_stg_superstore_order_date.cfd79be3ba
+[0m15:44:53.445938 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.superstore.dim_customers, now test.superstore.not_null_stg_superstore_customer_id.be943af154)
+[0m15:44:53.446934 [debug] [Thread-3 (]: Began executing node model.superstore.dim_products
+[0m15:44:53.448938 [debug] [Thread-2 (]: Began compiling node model.superstore.fact_sales
+[0m15:44:53.449939 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.superstore.dim_locations, now test.superstore.not_null_stg_superstore_order_date.cfd79be3ba)
+[0m15:44:53.451949 [debug] [Thread-4 (]: Began compiling node test.superstore.not_null_stg_superstore_customer_id.be943af154
+[0m15:44:53.455487 [debug] [Thread-3 (]: Finished running node model.superstore.dim_products
+[0m15:44:53.461907 [debug] [Thread-2 (]: Writing injected SQL for node "model.superstore.fact_sales"
+[0m15:44:53.462909 [debug] [Thread-1 (]: Began compiling node test.superstore.not_null_stg_superstore_order_date.cfd79be3ba
+[0m15:44:53.492968 [debug] [Thread-3 (]: Began running node test.superstore.not_null_stg_superstore_order_id.ebbb90b34b
+[0m15:44:53.509644 [debug] [Thread-4 (]: Writing injected SQL for node "test.superstore.not_null_stg_superstore_customer_id.be943af154"
+[0m15:44:53.629482 [debug] [Thread-1 (]: Writing injected SQL for node "test.superstore.not_null_stg_superstore_order_date.cfd79be3ba"
+[0m15:44:53.631105 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.superstore.dim_products, now test.superstore.not_null_stg_superstore_order_id.ebbb90b34b)
+[0m15:44:53.633128 [debug] [Thread-3 (]: Began compiling node test.superstore.not_null_stg_superstore_order_id.ebbb90b34b
+[0m15:44:53.654821 [debug] [Thread-3 (]: Writing injected SQL for node "test.superstore.not_null_stg_superstore_order_id.ebbb90b34b"
+[0m15:44:53.656331 [debug] [Thread-2 (]: Began executing node model.superstore.fact_sales
+[0m15:44:53.657348 [debug] [Thread-1 (]: Began executing node test.superstore.not_null_stg_superstore_order_date.cfd79be3ba
+[0m15:44:53.660373 [debug] [Thread-2 (]: Finished running node model.superstore.fact_sales
+[0m15:44:53.663367 [debug] [Thread-1 (]: Finished running node test.superstore.not_null_stg_superstore_order_date.cfd79be3ba
+[0m15:44:53.664366 [debug] [Thread-4 (]: Began executing node test.superstore.not_null_stg_superstore_customer_id.be943af154
+[0m15:44:53.665376 [debug] [Thread-2 (]: Began running node test.superstore.not_null_stg_superstore_product_id.cd1f4bba11
+[0m15:44:53.666896 [debug] [Thread-3 (]: Began executing node test.superstore.not_null_stg_superstore_order_id.ebbb90b34b
+[0m15:44:53.668449 [debug] [Thread-1 (]: Began running node test.superstore.not_null_stg_superstore_row_id.a028666c6e
+[0m15:44:53.671478 [debug] [Thread-4 (]: Finished running node test.superstore.not_null_stg_superstore_customer_id.be943af154
+[0m15:44:53.672477 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.superstore.fact_sales, now test.superstore.not_null_stg_superstore_product_id.cd1f4bba11)
+[0m15:44:53.674476 [debug] [Thread-3 (]: Finished running node test.superstore.not_null_stg_superstore_order_id.ebbb90b34b
+[0m15:44:53.675477 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_stg_superstore_order_date.cfd79be3ba, now test.superstore.not_null_stg_superstore_row_id.a028666c6e)
+[0m15:44:53.676477 [debug] [Thread-4 (]: Began running node test.superstore.not_null_stg_superstore_sales.86849a7f58
+[0m15:44:53.677991 [debug] [Thread-2 (]: Began compiling node test.superstore.not_null_stg_superstore_product_id.cd1f4bba11
+[0m15:44:53.680036 [debug] [Thread-3 (]: Began running node test.superstore.unique_stg_superstore_row_id.52fbdc42ed
+[0m15:44:53.681032 [debug] [Thread-1 (]: Began compiling node test.superstore.not_null_stg_superstore_row_id.a028666c6e
+[0m15:44:53.682032 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_stg_superstore_customer_id.be943af154, now test.superstore.not_null_stg_superstore_sales.86849a7f58)
+[0m15:44:53.693560 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_stg_superstore_order_id.ebbb90b34b, now test.superstore.unique_stg_superstore_row_id.52fbdc42ed)
+[0m15:44:53.699805 [debug] [Thread-2 (]: Writing injected SQL for node "test.superstore.not_null_stg_superstore_product_id.cd1f4bba11"
+[0m15:44:53.720155 [debug] [Thread-1 (]: Writing injected SQL for node "test.superstore.not_null_stg_superstore_row_id.a028666c6e"
+[0m15:44:53.721190 [debug] [Thread-4 (]: Began compiling node test.superstore.not_null_stg_superstore_sales.86849a7f58
+[0m15:44:53.722221 [debug] [Thread-3 (]: Began compiling node test.superstore.unique_stg_superstore_row_id.52fbdc42ed
+[0m15:44:53.742378 [debug] [Thread-4 (]: Writing injected SQL for node "test.superstore.not_null_stg_superstore_sales.86849a7f58"
+[0m15:44:53.768006 [debug] [Thread-3 (]: Writing injected SQL for node "test.superstore.unique_stg_superstore_row_id.52fbdc42ed"
+[0m15:44:53.770026 [debug] [Thread-1 (]: Began executing node test.superstore.not_null_stg_superstore_row_id.a028666c6e
+[0m15:44:53.772033 [debug] [Thread-2 (]: Began executing node test.superstore.not_null_stg_superstore_product_id.cd1f4bba11
+[0m15:44:53.774566 [debug] [Thread-1 (]: Finished running node test.superstore.not_null_stg_superstore_row_id.a028666c6e
+[0m15:44:53.777589 [debug] [Thread-2 (]: Finished running node test.superstore.not_null_stg_superstore_product_id.cd1f4bba11
+[0m15:44:53.779595 [debug] [Thread-4 (]: Began executing node test.superstore.not_null_stg_superstore_sales.86849a7f58
+[0m15:44:53.781581 [debug] [Thread-1 (]: Began running node test.superstore.not_null_dim_dates_date_key.8dfe93e348
+[0m15:44:53.782582 [debug] [Thread-2 (]: Began running node test.superstore.unique_dim_dates_date_key.61e1d0726d
+[0m15:44:53.786163 [debug] [Thread-4 (]: Finished running node test.superstore.not_null_stg_superstore_sales.86849a7f58
+[0m15:44:53.787186 [debug] [Thread-3 (]: Began executing node test.superstore.unique_stg_superstore_row_id.52fbdc42ed
+[0m15:44:53.789185 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_stg_superstore_row_id.a028666c6e, now test.superstore.not_null_dim_dates_date_key.8dfe93e348)
+[0m15:44:53.791185 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_stg_superstore_product_id.cd1f4bba11, now test.superstore.unique_dim_dates_date_key.61e1d0726d)
+[0m15:44:53.792183 [debug] [Thread-4 (]: Began running node test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m15:44:53.794727 [debug] [Thread-3 (]: Finished running node test.superstore.unique_stg_superstore_row_id.52fbdc42ed
+[0m15:44:53.796750 [debug] [Thread-1 (]: Began compiling node test.superstore.not_null_dim_dates_date_key.8dfe93e348
+[0m15:44:53.797752 [debug] [Thread-2 (]: Began compiling node test.superstore.unique_dim_dates_date_key.61e1d0726d
+[0m15:44:53.799896 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_stg_superstore_sales.86849a7f58, now test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d)
+[0m15:44:53.801414 [debug] [Thread-3 (]: Began running node test.superstore.unique_dim_customers_customer_id.15c9f1e2fd
+[0m15:44:53.828832 [debug] [Thread-1 (]: Writing injected SQL for node "test.superstore.not_null_dim_dates_date_key.8dfe93e348"
+[0m15:44:53.835343 [debug] [Thread-4 (]: Began compiling node test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m15:44:53.851994 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.superstore.unique_stg_superstore_row_id.52fbdc42ed, now test.superstore.unique_dim_customers_customer_id.15c9f1e2fd)
+[0m15:44:53.856987 [debug] [Thread-2 (]: Writing injected SQL for node "test.superstore.unique_dim_dates_date_key.61e1d0726d"
+[0m15:44:53.861168 [debug] [Thread-1 (]: Began executing node test.superstore.not_null_dim_dates_date_key.8dfe93e348
+[0m15:44:53.889866 [debug] [Thread-4 (]: Writing injected SQL for node "test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m15:44:53.890867 [debug] [Thread-3 (]: Began compiling node test.superstore.unique_dim_customers_customer_id.15c9f1e2fd
+[0m15:44:53.894257 [debug] [Thread-1 (]: Finished running node test.superstore.not_null_dim_dates_date_key.8dfe93e348
+[0m15:44:53.912939 [debug] [Thread-1 (]: Began running node test.superstore.not_null_dim_locations_location_key.375a9dc0f3
+[0m15:44:53.923026 [debug] [Thread-3 (]: Writing injected SQL for node "test.superstore.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m15:44:53.925072 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_dim_dates_date_key.8dfe93e348, now test.superstore.not_null_dim_locations_location_key.375a9dc0f3)
+[0m15:44:53.927071 [debug] [Thread-2 (]: Began executing node test.superstore.unique_dim_dates_date_key.61e1d0726d
+[0m15:44:53.930479 [debug] [Thread-1 (]: Began compiling node test.superstore.not_null_dim_locations_location_key.375a9dc0f3
+[0m15:44:53.931903 [debug] [Thread-4 (]: Began executing node test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m15:44:53.935484 [debug] [Thread-2 (]: Finished running node test.superstore.unique_dim_dates_date_key.61e1d0726d
+[0m15:44:53.945866 [debug] [Thread-4 (]: Finished running node test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m15:44:53.956472 [debug] [Thread-1 (]: Writing injected SQL for node "test.superstore.not_null_dim_locations_location_key.375a9dc0f3"
+[0m15:44:53.957468 [debug] [Thread-3 (]: Began executing node test.superstore.unique_dim_customers_customer_id.15c9f1e2fd
+[0m15:44:53.958467 [debug] [Thread-2 (]: Began running node test.superstore.unique_dim_locations_location_key.9d6de2f887
+[0m15:44:53.960458 [debug] [Thread-4 (]: Began running node test.superstore.not_null_dim_products_product_id.c8aba288d1
+[0m15:44:53.964039 [debug] [Thread-3 (]: Finished running node test.superstore.unique_dim_customers_customer_id.15c9f1e2fd
+[0m15:44:53.965576 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.superstore.unique_dim_dates_date_key.61e1d0726d, now test.superstore.unique_dim_locations_location_key.9d6de2f887)
+[0m15:44:53.966595 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_dim_customers_customer_id.dd91cd1c8d, now test.superstore.not_null_dim_products_product_id.c8aba288d1)
+[0m15:44:53.968622 [debug] [Thread-3 (]: Began running node test.superstore.unique_dim_products_product_id.ef7b2a9985
+[0m15:44:53.969637 [debug] [Thread-1 (]: Began executing node test.superstore.not_null_dim_locations_location_key.375a9dc0f3
+[0m15:44:53.970634 [debug] [Thread-2 (]: Began compiling node test.superstore.unique_dim_locations_location_key.9d6de2f887
+[0m15:44:53.971634 [debug] [Thread-4 (]: Began compiling node test.superstore.not_null_dim_products_product_id.c8aba288d1
+[0m15:44:53.972634 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.superstore.unique_dim_customers_customer_id.15c9f1e2fd, now test.superstore.unique_dim_products_product_id.ef7b2a9985)
+[0m15:44:53.974635 [debug] [Thread-1 (]: Finished running node test.superstore.not_null_dim_locations_location_key.375a9dc0f3
+[0m15:44:53.995770 [debug] [Thread-2 (]: Writing injected SQL for node "test.superstore.unique_dim_locations_location_key.9d6de2f887"
+[0m15:44:54.021744 [debug] [Thread-4 (]: Writing injected SQL for node "test.superstore.not_null_dim_products_product_id.c8aba288d1"
+[0m15:44:54.023427 [debug] [Thread-3 (]: Began compiling node test.superstore.unique_dim_products_product_id.ef7b2a9985
+[0m15:44:54.024423 [debug] [Thread-1 (]: Began running node test.superstore.not_null_fact_sales_customer_id.39febb61fd
+[0m15:44:54.038758 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_dim_locations_location_key.375a9dc0f3, now test.superstore.not_null_fact_sales_customer_id.39febb61fd)
+[0m15:44:54.040307 [debug] [Thread-1 (]: Began compiling node test.superstore.not_null_fact_sales_customer_id.39febb61fd
+[0m15:44:54.059112 [debug] [Thread-3 (]: Writing injected SQL for node "test.superstore.unique_dim_products_product_id.ef7b2a9985"
+[0m15:44:54.067233 [debug] [Thread-1 (]: Writing injected SQL for node "test.superstore.not_null_fact_sales_customer_id.39febb61fd"
+[0m15:44:54.069228 [debug] [Thread-2 (]: Began executing node test.superstore.unique_dim_locations_location_key.9d6de2f887
+[0m15:44:54.073493 [debug] [Thread-2 (]: Finished running node test.superstore.unique_dim_locations_location_key.9d6de2f887
+[0m15:44:54.074511 [debug] [Thread-2 (]: Began running node test.superstore.not_null_fact_sales_location_key.7da02be8cc
+[0m15:44:54.075509 [debug] [Thread-4 (]: Began executing node test.superstore.not_null_dim_products_product_id.c8aba288d1
+[0m15:44:54.076491 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.superstore.unique_dim_locations_location_key.9d6de2f887, now test.superstore.not_null_fact_sales_location_key.7da02be8cc)
+[0m15:44:54.080092 [debug] [Thread-4 (]: Finished running node test.superstore.not_null_dim_products_product_id.c8aba288d1
+[0m15:44:54.081082 [debug] [Thread-3 (]: Began executing node test.superstore.unique_dim_products_product_id.ef7b2a9985
+[0m15:44:54.082615 [debug] [Thread-2 (]: Began compiling node test.superstore.not_null_fact_sales_location_key.7da02be8cc
+[0m15:44:54.083641 [debug] [Thread-1 (]: Began executing node test.superstore.not_null_fact_sales_customer_id.39febb61fd
+[0m15:44:54.085157 [debug] [Thread-4 (]: Began running node test.superstore.not_null_fact_sales_product_id.39101802a8
+[0m15:44:54.088231 [debug] [Thread-3 (]: Finished running node test.superstore.unique_dim_products_product_id.ef7b2a9985
+[0m15:44:54.110003 [debug] [Thread-2 (]: Writing injected SQL for node "test.superstore.not_null_fact_sales_location_key.7da02be8cc"
+[0m15:44:54.113536 [debug] [Thread-1 (]: Finished running node test.superstore.not_null_fact_sales_customer_id.39febb61fd
+[0m15:44:54.115059 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_dim_products_product_id.c8aba288d1, now test.superstore.not_null_fact_sales_product_id.39101802a8)
+[0m15:44:54.116869 [debug] [Thread-3 (]: Began running node test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9
+[0m15:44:54.119387 [debug] [Thread-1 (]: Began running node test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m15:44:54.120934 [debug] [Thread-4 (]: Began compiling node test.superstore.not_null_fact_sales_product_id.39101802a8
+[0m15:44:54.122969 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.superstore.unique_dim_products_product_id.ef7b2a9985, now test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9)
+[0m15:44:54.124478 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_fact_sales_customer_id.39febb61fd, now test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47)
+[0m15:44:54.126523 [debug] [Thread-2 (]: Began executing node test.superstore.not_null_fact_sales_location_key.7da02be8cc
+[0m15:44:54.146996 [debug] [Thread-4 (]: Writing injected SQL for node "test.superstore.not_null_fact_sales_product_id.39101802a8"
+[0m15:44:54.149025 [debug] [Thread-3 (]: Began compiling node test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9
+[0m15:44:54.150033 [debug] [Thread-1 (]: Began compiling node test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m15:44:54.153588 [debug] [Thread-2 (]: Finished running node test.superstore.not_null_fact_sales_location_key.7da02be8cc
+[0m15:44:54.178729 [debug] [Thread-3 (]: Writing injected SQL for node "test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9"
+[0m15:44:54.227337 [debug] [Thread-4 (]: Began executing node test.superstore.not_null_fact_sales_product_id.39101802a8
+[0m15:44:54.249064 [debug] [Thread-1 (]: Writing injected SQL for node "test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47"
+[0m15:44:54.250071 [debug] [Thread-2 (]: Began running node test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068
+[0m15:44:54.253588 [debug] [Thread-4 (]: Finished running node test.superstore.not_null_fact_sales_product_id.39101802a8
+[0m15:44:54.256167 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_fact_sales_location_key.7da02be8cc, now test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068)
+[0m15:44:54.259162 [debug] [Thread-4 (]: Began running node test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m15:44:54.261173 [debug] [Thread-2 (]: Began compiling node test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068
+[0m15:44:54.262162 [debug] [Thread-3 (]: Began executing node test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9
+[0m15:44:54.264164 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_fact_sales_product_id.39101802a8, now test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b)
+[0m15:44:54.265372 [debug] [Thread-1 (]: Began executing node test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m15:44:54.275006 [debug] [Thread-3 (]: Finished running node test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9
+[0m15:44:54.304407 [debug] [Thread-4 (]: Began compiling node test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m15:44:54.322551 [debug] [Thread-1 (]: Finished running node test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47
+[0m15:44:54.336591 [debug] [Thread-2 (]: Writing injected SQL for node "test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068"
+[0m15:44:54.338106 [debug] [Thread-3 (]: Began running node test.superstore.unique_fact_sales_sales_line_id.f06bce88c4
+[0m15:44:54.380168 [debug] [Thread-4 (]: Writing injected SQL for node "test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b"
+[0m15:44:54.382309 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.superstore.not_null_fact_sales_sales_line_id.2c2eedaeb9, now test.superstore.unique_fact_sales_sales_line_id.f06bce88c4)
+[0m15:44:54.384333 [debug] [Thread-3 (]: Began compiling node test.superstore.unique_fact_sales_sales_line_id.f06bce88c4
+[0m15:44:54.385331 [debug] [Thread-2 (]: Began executing node test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068
+[0m15:44:54.403822 [debug] [Thread-3 (]: Writing injected SQL for node "test.superstore.unique_fact_sales_sales_line_id.f06bce88c4"
+[0m15:44:54.405967 [debug] [Thread-2 (]: Finished running node test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068
+[0m15:44:54.407975 [debug] [Thread-4 (]: Began executing node test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m15:44:54.409971 [debug] [Thread-4 (]: Finished running node test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b
+[0m15:44:54.411975 [debug] [Thread-3 (]: Began executing node test.superstore.unique_fact_sales_sales_line_id.f06bce88c4
+[0m15:44:54.414505 [debug] [Thread-3 (]: Finished running node test.superstore.unique_fact_sales_sales_line_id.f06bce88c4
+[0m15:44:54.417512 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:44:54.419034 [debug] [MainThread]: Connection 'list_dev_main_stg' was properly closed.
+[0m15:44:54.420061 [debug] [MainThread]: Connection 'list_dev_main_dwh' was properly closed.
+[0m15:44:54.421058 [debug] [MainThread]: Connection 'test.superstore.relationships_fact_sales_customer_id__customer_id__ref_dim_customers_.540baa6d47' was properly closed.
+[0m15:44:54.422048 [debug] [MainThread]: Connection 'test.superstore.unique_fact_sales_sales_line_id.f06bce88c4' was properly closed.
+[0m15:44:54.422048 [debug] [MainThread]: Connection 'test.superstore.relationships_fact_sales_product_id__product_id__ref_dim_products_.c768410e5b' was properly closed.
+[0m15:44:54.423579 [debug] [MainThread]: Connection 'test.superstore.relationships_fact_sales_location_key__location_key__ref_dim_locations_.17fb246068' was properly closed.
+[0m15:44:54.438497 [debug] [MainThread]: Command end result
+[0m15:44:54.758700 [debug] [MainThread]: Wrote artifact WritableManifest to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\manifest.json
+[0m15:44:54.803258 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\semantic_manifest.json
+[0m15:44:55.008301 [debug] [MainThread]: Wrote artifact OsiDocument to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\osi_document.json
+[0m15:44:55.038232 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\run_results.json
+[0m15:44:55.074372 [debug] [MainThread]: Acquiring new duckdb connection 'generate_catalog'
+[0m15:44:55.074940 [info ] [MainThread]: Building catalog
+[0m15:44:55.106856 [debug] [ThreadPool]: Acquiring new duckdb connection 'dev.information_schema'
+[0m15:44:55.148667 [debug] [ThreadPool]: Using duckdb connection "dev.information_schema"
+[0m15:44:55.149712 [debug] [ThreadPool]: On dev.information_schema: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "superstore", "target_name": "dev", "connection_name": "dev.information_schema"} */
+
+    
+    with tables as (
+      select *
+    from (
+        select
+            t.database_name as table_database,
+            t.schema_name as table_schema,
+            t.table_name as table_name,
+            'BASE TABLE' as table_type,
+            t.comment as table_comment
+        from duckdb_tables() t
+        where upper(t.database_name) = upper('dev')
+
+        union all
+
+        select
+            v.database_name as table_database,
+            v.schema_name as table_schema,
+            v.view_name as table_name,
+            'VIEW' as table_type,
+            v.comment as table_comment
+        from duckdb_views() v
+        where upper(v.database_name) = upper('dev')
+    ) catalog_tables
+      
+        where (
+
+                (
+                    upper(table_schema) = upper('main_dwh')
+                    and upper(table_name) = upper('agg_monthly_sales')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main_dwh')
+                    and upper(table_name) = upper('dim_dates')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main_dwh')
+                    and upper(table_name) = upper('dim_locations')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main_stg')
+                    and upper(table_name) = upper('stg_superstore')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main_dwh')
+                    and upper(table_name) = upper('dim_products')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('ods')
+                    and upper(table_name) = upper('raw_superstore')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main_dwh')
+                    and upper(table_name) = upper('dim_customers')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main_dwh')
+                    and upper(table_name) = upper('fact_sales')
+                ))
+    
+    ),
+    columns as (
+      select *
+    from (
+        select
+            c.database_name as table_database,
+            c.schema_name as table_schema,
+            c.table_name as table_name,
+            c.column_name as column_name,
+            c.column_index as column_index,
+            c.data_type as column_type,
+            c.comment as column_comment
+        from duckdb_columns() c
+        where upper(c.database_name) = upper('dev')
+    ) catalog_columns
+      
+        where (
+
+                (
+                    upper(table_schema) = upper('main_dwh')
+                    and upper(table_name) = upper('agg_monthly_sales')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main_dwh')
+                    and upper(table_name) = upper('dim_dates')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main_dwh')
+                    and upper(table_name) = upper('dim_locations')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main_stg')
+                    and upper(table_name) = upper('stg_superstore')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main_dwh')
+                    and upper(table_name) = upper('dim_products')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('ods')
+                    and upper(table_name) = upper('raw_superstore')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main_dwh')
+                    and upper(table_name) = upper('dim_customers')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main_dwh')
+                    and upper(table_name) = upper('fact_sales')
+                ))
+    
+    )
+    select
+        tables.table_database,
+        tables.table_schema,
+        tables.table_name,
+        tables.table_type,
+        tables.table_comment,
+        columns.column_name,
+        columns.column_index,
+        columns.column_type,
+        columns.column_comment,
+        null as table_owner
+    from tables
+    join columns using (table_database, table_schema, table_name)
+    order by table_schema, table_name, column_index
+  
+  
+[0m15:44:55.150733 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:44:55.218233 [debug] [ThreadPool]: SQL status: OK in 0.067 seconds
+[0m15:44:55.233984 [debug] [ThreadPool]: On dev.information_schema: Close
+[0m15:44:55.283319 [debug] [MainThread]: Wrote artifact CatalogArtifact to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\catalog.json
+[0m15:44:55.438452 [debug] [MainThread]: Wrote artifact WritableManifest to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\manifest.json
+[0m15:44:55.451119 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\semantic_manifest.json
+[0m15:44:55.463804 [debug] [MainThread]: Wrote artifact OsiDocument to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\osi_document.json
+[0m15:44:55.465326 [info ] [MainThread]: Catalog written to D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\dbt_superstore\target\catalog.json
+[0m15:44:55.469458 [debug] [MainThread]: Command `dbt docs generate` succeeded at 15:44:55.467892 after 8.88 seconds
+[0m15:44:55.471038 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m15:44:55.472081 [debug] [MainThread]: Connection 'dev.information_schema' was properly closed.
+[0m15:44:55.474071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000155696F7E00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015567896900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015567B0E8D0>]}
+[0m15:44:55.475065 [debug] [MainThread]: Flushing usage events
+[0m15:44:57.040627 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:45:15.837283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FDE7DE510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FE1378050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FE1379880>]}
+
+
+============================== 15:45:15.848331 | 09bba0fa-87c3-4f5a-bb7c-3a69cc33273f ==============================
+[0m15:45:15.848331 [info ] [MainThread]: Running with dbt=1.12.5
+[0m15:45:15.850332 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'D:\\NTI - 2026\\projects\\HW_dbtWithDuck\\superstore_airflow_dbt_duckdb\\superstore_pipeline\\dbt_superstore', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt docs serve', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'D:\\NTI - 2026\\projects\\HW_dbtWithDuck\\superstore_airflow_dbt_duckdb\\superstore_pipeline\\dbt_superstore\\logs'}
+[0m15:45:16.506872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '09bba0fa-87c3-4f5a-bb7c-3a69cc33273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FE31CD610>]}
+[0m15:45:16.681609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '09bba0fa-87c3-4f5a-bb7c-3a69cc33273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FE0F66A20>]}
+[0m15:45:16.936926 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+[WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+[0m15:45:16.978353 [error] [MainThread]: Traceback (most recent call last):
+  File "D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\.venv\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\.venv\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\.venv\Lib\site-packages\dbt\cli\requires.py", line 295, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\.venv\Lib\site-packages\dbt\cli\requires.py", line 340, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\.venv\Lib\site-packages\dbt\cli\requires.py", line 387, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\.venv\Lib\site-packages\dbt\cli\main.py", line 323, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "D:\NTI - 2026\projects\HW_dbtWithDuck\superstore_airflow_dbt_duckdb\superstore_pipeline\.venv\Lib\site-packages\dbt\task\docs\serve.py", line 24, in run
+    with socketserver.TCPServer((host, port), SimpleHTTPRequestHandler) as httpd:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ahmad\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "C:\Users\ahmad\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+
+[0m15:45:16.980332 [debug] [MainThread]: Command `dbt docs serve` failed at 15:45:16.980332 after 1.52 seconds
+[0m15:45:16.982335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FE1297680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FE326C410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019FE326CF50>]}
+[0m15:45:16.983335 [debug] [MainThread]: Flushing usage events
+[0m15:45:18.346795 [debug] [MainThread]: An error was encountered while trying to flush usage events
